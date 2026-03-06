@@ -1,23 +1,25 @@
 # Security and Privacy Working Group
 
-A working group of the Agentic AI Foundation (AAIF).
+For more information, review the Working Group Charter (*coming soon*).
 
 ## Mission
 
 The mission of this working group is currently being defined. Check back soon for updates.
 
-## Leadership
+## Chairs
 
-| Role | Name |
-| --- | --- |
-| Chair | Alex Frazer |
-| Co-Chair | TBD |
+* **Chair: Alex Frazer [@awfrazer](https://github.com/awfrazer)** - Runlayer
+* **Co-Chair: TBD**
+
+The Working Group Chairs were appointed by the Platinum and Gold members of the working group. 
+
+Current term for the Working Group Chairs is **March 1, 2026 - January 31, 2027**. 
 
 ## Meetings
 
-This working group meets **biweekly**.
+This working group meets **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=8:00AM&tz=San%20Francisco)).
 
-**Next meeting:** March 3, 2026
+**Next meeting:** March 16, 2026
 
 | Timezone | Time |
 | --- | --- |
@@ -30,12 +32,41 @@ This working group meets **biweekly**.
 | CST / China (UTC+8) | 2:00 AM +1 |
 | JST / Japan (UTC+9) | 3:00 AM +1 |
 
-## Tooling
+**[Join the Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91539659750?password=59701aab-9082-4ab4-8115-a18c11039c4b)** - Please note the meeting link will only work for those that have signed up for the working group.
 
-- **[GitHub](https://github.com/aaif/wg-security-and-privacy)**
-- **Mailing List** — [wg-security-privacy@lists.aaif.io](mailto:wg-security-privacy@lists.aaif.io)
-- **[Discord](https://discord.gg/Wbck3N2CsC)**
-- **[Google Drive](https://drive.google.com/drive/folders/15vuW4CAYcZ_-xQgO77t_e0lei75VPMNS?usp=sharing)**
+**Working Group Meetings are only open to AAIF members at this time.** Participants must be invited to join. 
+
+If someone from an AAIF member organization would like to join, please [sign up here](https://forms.gle/mqvEADnhCsmsvmC69) using your business email address.
+
+
+## Meeting Agenda and Minutes
+
+[Running Notes Doc](https://docs.google.com/document/d/10xX5Ng6SOIrvbSpHn8aAW2vIi_VGrV-JdahCyEl-uLM/edit?usp=sharing)
+
+All meeting recordings and AI summaries can be found on your [LFX Individual Dashboard](openprofile.dev). Create a Linux Foundation (LFX) account to see all meetings, AI summaries, recordings, etc. all in one place.
+
+
+## Communication
+
+Reach out on the private working group mailing list: wg-security-privacy@lists.aaif.io
+
+Join the private Working Group [Discord channel](https://discord.gg/BAzqNsGctj). **(Please do not share this link publicly; it is for Working Group members only).**
+
+Need help? email: operations@aaif.io.
+
+## Join a Working Group
+The TC supports multiple technical working groups. **Working Groups are only open to AAIF members at this time.** Participants must be invited to join. 
+
+If someone from an AAIF member organization would like to join, please [sign up here](https://forms.gle/mqvEADnhCsmsvmC69) using your business email address.
+
+The current list of working groups are:
+   - Accuracy & Reliability
+   - Agentic Commerce
+   - Governance, Risk & Regulatory Alignment
+   - Identity & Trust
+   - Observability & Traceability
+   - Security & Privacy
+   - Workflows & Process Integration
 
 ## Commitment to Neutrality
 
