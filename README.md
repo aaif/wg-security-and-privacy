@@ -9,7 +9,7 @@ The mission of this working group is currently being defined. Check back soon fo
 ## Chairs
 
 * **Chair: Alex Frazer [@awfrazer](https://github.com/awfrazer)** - Runlayer
-* **Co-Chair: TBD**
+* **Co-Chair: Junjie Bu [@mindpower](https://github.com/mindpower)** - Google
 
 The Working Group Chairs were appointed by the Platinum and Gold members of the working group. 
 
@@ -19,7 +19,7 @@ Current term for the Working Group Chairs is **March 1, 2026 - January 31, 2027*
 
 This working group meets **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=10:00AM&tz=San%20Francisco)).
 
-**Next meeting:** March 16, 2026
+**Next meeting:** March 17, 2026
 
 | Timezone | Time |
 | --- | --- |
