@@ -46,6 +46,14 @@ If someone from an AAIF member organization would like to join, please [sign up 
 All meeting recordings and AI summaries can be found on your [LFX Individual Dashboard](openprofile.dev). Create a Linux Foundation (LFX) account to see all meetings, AI summaries, recordings, etc. all in one place.
 
 
+## Repository Structure
+
+| Folder | Description |
+|--------|-------------|
+| [`charter/`](charter/) | Working group charter and governance documents |
+| [`deliverables/`](deliverables/) | Published deliverables produced by the working group |
+| [`meeting-notes/`](meeting-notes/) | Meeting notes, agendas, and summaries |
+
 ## Communication
 
 Reach out on the private working group mailing list: wg-security-privacy@lists.aaif.io
