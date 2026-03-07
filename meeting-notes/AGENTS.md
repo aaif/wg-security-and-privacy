@@ -15,7 +15,7 @@ Save each meeting's notes as `YYYY-MM-DD.md` using the date of the meeting (e.g.
 5. List any decisions made under **Decisions**. If none, write "None."
 6. List any deliverables identified under **Deliverables**. If none, write "None."
 7. Fill in the **Action Items** table with owner, task description, and due date for each item.
-8. Add a row to the table in `README.md` linking to the new meeting notes file. Insert the row at the top of the table (below the header) so that notes remain in descending date order. Include a 1-2 sentence summary of the meeting's key topics.
+8. Add a row to the table in `README.md` for the new meeting. Insert the row at the top of the table (below the header) so that notes remain in descending date order. The row should contain the date, a link labeled "Full notes" pointing to the notes file, and a 1-2 sentence summary of the meeting's key topics.
 
 ## Style Guidance
 
