@@ -1,7 +1,7 @@
 # Taxonomy of Terms and Definitions
 
 > **Status:** Draft
-> **Last Modified:** 2026-03-07
+> **Last Modified:** 2026-03-17
 
 ## Purpose
 
@@ -17,16 +17,24 @@ The taxonomy is intended to be a living document. Once mature, these definitions
 
 ## Terms
 
-### Agent Behavior
+### Agentic Threats
 
 | Term | Definition | Notes |
 |------|-----------|-------|
 | Agent derailment | An unintended deviation in an AI agent's behavior that causes it to pursue goals or take actions outside its intended scope, without malicious external cause. | Raised during discussion of non-malicious agent misbehavior ([2026-03-03](../meeting-notes/2026-03-03.md)). Distinct from adversarial attacks. |
 | Agent sabotage | Deliberate manipulation of an AI agent's behavior by an external party, causing it to act against its intended purpose. | Discussed alongside derailment as an edge case between security and reliability ([2026-03-03](../meeting-notes/2026-03-03.md)). |
 | Blast radius | The scope and extent of damage or data exposure that can result from a compromised, misconfigured, or rogue agent. | Samantha Coyle raised this in the context of protecting data from rogue agents ([2026-03-03](../meeting-notes/2026-03-03.md)). |
-| Human in the loop (HITL) | A design pattern in which a human must review, approve, or intervene in an AI agent's actions at defined checkpoints before the agent may proceed. | Identified as a key consideration during the initial brainstorm ([2026-02-17](../meeting-notes/2026-02-17.md)). |
 | Multi-agent persuasion | The risk that one AI agent manipulates or unduly influences another agent's decision-making through adversarial or misleading communication. | Brainstormed as a mitigation area ([2026-02-17](../meeting-notes/2026-02-17.md)). |
 | Rogue agent | An AI agent that operates outside its authorized boundaries, whether due to compromise, misconfiguration, or emergent behavior. | Used in discussion of blast radius and data protection ([2026-03-03](../meeting-notes/2026-03-03.md)). |
+| Typo squatting | A supply chain attack in which an adversary publishes a malicious server package with a name resembling a legitimate one, hoping users will install it by mistake. | Raised as a supply chain risk to agentic systems ([2026-03-17](../meeting-notes/2026-03-17.md)). |
+
+### Agentic Controls
+
+| Term | Definition | Notes |
+|------|-----------|-------|
+| Autonomous | A mode or design pattern in which an agent can operate and take actions to some extent without explicit permission from the agent user. The agent interprets a prompt or request and performs one or more actions to carry it out — for example, finding, negotiating, and completing a purchase on a user's behalf. | Defined during taxonomy review ([2026-03-17](../meeting-notes/2026-03-17.md)). |
+| Deterministic policies | Policies that constrain an autonomous agent's actions in a way that cannot be overridden or misinterpreted by the AI agent. These policies are enforced outside the AI inference process, preventing the agent from taking certain actions — for example, an agent SDK policy that blocks access to a tool. | Defined during taxonomy review ([2026-03-17](../meeting-notes/2026-03-17.md)). |
+| Human in the loop (HITL) | A design pattern in which a human must review, approve, or intervene in an AI agent's actions at defined checkpoints before the agent may proceed. | Identified as a key consideration during the initial brainstorm ([2026-02-17](../meeting-notes/2026-02-17.md)). |
 
 ### Data and Privacy
 
