@@ -4,7 +4,7 @@ For more information, review the Working Group Charter (*coming soon*).
 
 ## Mission
 
-The mission of this working group is currently being defined. Check back soon for updates.
+The Security and Privacy Working Group advances the Agentic AI Foundation's mission by establishing security and privacy as a shared discipline across the Agentic AI ecosystem. Producing open threat models, a shared taxonomy, and design patterns that providers, consumers, and peer working groups can adopt to share responsibility for trustworthy agentic AI.
 
 ## Chairs
 
