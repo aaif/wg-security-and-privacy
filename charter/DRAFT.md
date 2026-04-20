@@ -5,105 +5,109 @@
 ### 1. Working Group Name
 
 - **Working Group Name:** Security & Privacy
-- **Short Name / Acronym:** [WG Acronym]
-- **Date Approved:** [YYYY-MM-DD]
-- **Last Updated:** [YYYY-MM-DD]
-- **Homepage / Repo (if applicable):** [URL]
-- **Primary Contact (Chair/Lead):** [Name, email/handle]
+- **Short Name / Acronym:** S&P
+- **Date Approved:** TBD
+- **Last Updated:** 2026-04-17
+- **Homepage / Repo:** https://github.com/aaif/wg-security-and-privacy
+- **Primary Contact (Chair/Lead):** Alex Frazer (Chair) <alex@runlayer.com>
 
 ### 2. Purpose and Mission
 
 #### Mission Statement
 
-The Security & Privacy Working Group advances the Agentic AI Foundation's mission by [one-sentence description of what the WG exists to accomplish].
+The Security & Privacy Working Group advances the Agentic AI Foundation's mission by establishing security and privacy as a shared discipline across the Agentic AI ecosystem. Producing open threat models, a shared taxonomy, and design patterns that providers, consumers, and peer working groups can adopt to share responsibility for trustworthy agentic AI.
 
 #### Why this Working Group exists
 
 This Working Group was formed to address:
 
-- [Problem/need #1]
-- [Problem/need #2]
-- [Problem/need #3]
+- Agentic AI introduces novel security challenges — such as multi-agent persuasion, tool invocation risks, delegated authorization boundaries, and agent memory vulnerabilities — that are not adequately covered by existing frameworks.
+- Privacy risks expand as AI agents operate autonomously across services, handling sensitive data with limited human oversight and increasing blast radius when failures occur.
+- The ecosystem lacks a shared vocabulary, reusable design patterns, and open threat models specific to agentic AI security and privacy.
 
 #### Alignment to Foundation Goals
 
 The work of this WG supports:
 
-- [Foundation strategic pillar or goal #1]
-- [Foundation strategic pillar or goal #2]
-
-> **Context:** The Agentic AI Foundation is hosted within Linux Foundation and operates with community governance patterns similar in spirit to Cloud Native Computing Foundation and PyTorch Foundation.
+- Pre-competitive collaboration that produces open outputs benefiting the entire agentic AI ecosystem, not just individual members.
+- Security and privacy as an intersecting layer across all AAIF working groups, providing a shared discipline that strengthens every group's deliverables.
 
 ### 3. Scope
 
 #### In Scope (what the WG will do)
 
-- [In-scope item #1]
-- [In-scope item #2]
-- [In-scope item #3]
+- Threat Modeling and Attack Analysis
+- Security Architecture and Design Patterns
+- Agent Control and Containment
+- Data Protection and Privacy
+- Cross-WG Collaboration
 
 #### Out of Scope (what the WG will not do)
 
-- [Out-of-scope item #1]
-- [Out-of-scope item #2]
+- **Ethics, bias, and value-judgment questions** — Deferred to the Governance and Policy WG.
+- **Interpreting or prescribing regulatory compliance** — This group may monitor standards and understand regulatory requirements at a technical level to inform its own technical controls, but will not duplicate regulatory or compliance work.
+- **Certification of agentic systems or tools** — Certification criteria and programs are outside the scope of this group.
 
 #### Assumptions and Dependencies
 
-- **Assumptions:** [e.g., "Upstream projects will provide X interface"]
-- **Dependencies:** [other WGs/projects/standards bodies]
+- **Assumptions:** Depends on and presumes coordination with other working groups and other AAIF/LF initiatives.
+- **Dependencies:** Depends on and presumes coordination with other working groups and other AAIF/LF initiatives.
 
 ### 4. Goals, Deliverables, and Success Criteria
 
-#### 12-Month Goals (recommended: 3–6)
+#### 3-6 Month Goals (recommended: 3–6)
 
-- [Goal #1]
-- [Goal #2]
-- [Goal #3]
+- Release v0 Taxonomy of Terms and Definitions (internal)
+- Deliver Agentic AI Threat Model Gap Analysis (internal)
+- Release v1 Security and Privacy Design Patterns Catalog (public)
+- Complete first Cross-WG collaboration
 
 #### Planned Deliverables
 
 For each deliverable, define owner, format, and target date.
 
-- **[Deliverable Name]** — Owner: [Role/Name], Format: [spec/code/report], Target: [YYYY-MM-DD]
-- **[Deliverable Name]** — Owner: [Role/Name], Format: [spec/code/report], Target: [YYYY-MM-DD]
+- **Taxonomy of Terms and Definitions (v0)** — Format: Spec, Target: 2026-06-01
+- **Security and Privacy Design Patterns Catalog** — Format: Spec, Target: 2026-10-01
+- **Agentic AI Security Best Practices Guide** — Format: Report, Target: 2026-10-01
+- **Agentic AI Threat Modeling: Gap Analysis and Framework Design** — Format: Report, Target: 2026-07-01
+- **Cross-WG Security and Privacy Review Checklist** — Format: Report, Target: 2026-06-01
 
 #### Definition of Done (DoD)
 
 A deliverable is considered complete when:
 
-- [Criteria #1, e.g., reviewed/approved via WG process]
-- [Criteria #2, e.g., published in repo/site]
-- [Criteria #3, e.g., reference implementation or tests available]
+- Reviewed/approved via WG process
+- Published in repo/site
 
 #### Success Metrics (KPIs) (pick a small set)
 
-- **Adoption:** [e.g., number of downstream projects implementing spec]
-- **Quality:** [e.g., passing conformance suite, security review completed]
-- **Community:** [e.g., active contributors, meeting attendance, issue throughput]
-- **Timeliness:** [e.g., % milestones met]
+- **Adoption:** number of references in talks/projects/social media posts
+- **Quality:** alignment and adherence to deliverable standards
+- **Community:** engagement of members (average participation %)
+- **Timeliness:** % of milestones delivered on schedule
 
 ### 5. Working Methods
 
 #### Operating Model
 
-- [Consensus-driven / chair-led consensus / voting as fallback]
-- Work tracked in: [GitHub org/repo, issue tracker]
-- Primary artifacts: [specs, reference implementations, guidance docs, test suites]
+- Consensus-driven
+- Work tracked in: GitHub repo
+- Primary artifacts: reports, specs, reference implementations, guidance docs, test suites
 
 #### Meetings
 
-- **Cadence:** [weekly/biweekly/monthly]
-- **Duration:** [30/60/90 minutes]
-- **Time Zone Considerations:** [e.g., alternating times]
-- **Open Meetings:** [Yes/No] (default: Yes)
-- **Minutes/Notes:** [where notes are stored]
-- **Recordings:** [policy and storage location, if any]
+- **Cadence:** Biweekly
+- **Duration:** 60 minutes
+- **Time Zone Considerations:** Best effort meeting timing selection (with periodic review)
+- **Open Meetings:** Yes
+- **Minutes/Notes:** GitHub repo
+- **Recordings:** All meeting recordings are stored in LFX dashboard
 
 #### Communication Channels
 
-- **Async:** [mailing list/forum/Slack/Matrix]
-- **Sync:** [Zoom/Meet]
-- **Announcements:** [mailing list/tag]
+- **Async:** Mailing list, Discord/Slack
+- **Sync:** Zoom
+- **Announcements:** Mailing list, Discord/Slack
 
 ### 6. Membership and Participation
 
@@ -111,7 +115,7 @@ A deliverable is considered complete when:
 
 Participation is open to all individuals and organizations consistent with foundation policies.
 
-#### Member Roles (customize as needed)
+#### Member Roles
 
 - **Participants:** anyone attending meetings or contributing asynchronously.
 - **Contributors:** individuals making substantive contributions (issues, PRs, docs, reviews).
@@ -120,7 +124,7 @@ Participation is open to all individuals and organizations consistent with found
 
 #### Joining
 
-To join, a participant should: [e.g., join mailing list + attend 2 meetings + sign CLA/DCO if required].
+To join, a participant should sign up via the AAIF working group registration form using a business email address from an AAIF member organization.
 
 #### Expectations
 
@@ -132,24 +136,24 @@ To join, a participant should: [e.g., join mailing list + attend 2 meetings + si
 
 #### Leadership Structure
 
-- **Chair(s):** [Name(s)]
-- **Co-Chair(s) (optional):** [Name(s)]
-- **Tech Lead(s) (optional):** [Name(s)]
-- **Secretary/Program Manager (optional):** [Name(s)]
+- **Chair:** Alex Frazer (Runlayer)
+- **Co-Chair:** Junjie Bu (Google)
+- **Tech Lead(s) (optional):** None
+- **Secretary/Program Manager (optional):** None
 
 #### Selection and Term
 
-- **Chairs are selected by:** [election]
-- **Term Length:** [e.g., 12 months]
-- **Renewal:** [allowed/not allowed, max consecutive terms]
-- **Removal/Resignation:** [process]
+- **Chairs are selected by:** election — simple majority
+- **Term Length:** 12 months
+- **Renewal:** Allowed, max consecutive terms: 2
+- **Removal/Resignation:** motion with 2nd; supermajority vote
 
 #### Decision Process
 
 - **Default method:** rough consensus documented in issues/meeting notes.
 - **When consensus cannot be reached:**
-  - **Escalation path:** [e.g., TC / Foundation Governing Board]
-  - **Fallback vote rules (if used):** quorum [%], threshold [simple majority/supermajority], voting eligibility [contributors/maintainers].
+  - **Escalation path:** TC
+  - **Fallback vote rules (if used):** quorum [%], threshold — simple majority, voting eligibility — all active members.
 
 #### Quorum (if voting is used)
 
@@ -236,7 +240,7 @@ This WG adheres to the Linux Foundation Project's Code of Conduct.
 
 This charter may be amended by:
 
-[consensus/vote] of the Working Group, with [notice period] and documentation in [repo/location], and subject to [TOC/board] approval if required.
+Vote of the Working Group, with minimum 1 week notice and documentation in repo, and subject to TC approval if required.
 
 ### 14. Ratification
 
