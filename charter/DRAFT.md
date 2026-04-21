@@ -50,8 +50,14 @@ The work of this WG supports:
 
 #### Assumptions and Dependencies
 
-- **Assumptions:** Depends on and presumes coordination with other working groups and other AAIF/LF initiatives.
-- **Dependencies:** Depends on and presumes coordination with other working groups and other AAIF/LF initiatives.
+- **Assumptions:**
+  - Safety and risk management is treated as a shared responsibility across the agentic AI stack, not solely the concern of this WG
+  - Participants bring domain expertise from industry, academia, or standards work and are willing to engage in good-faith discussion of adversarial and failure scenarios
+  - Foundational terminology (e.g., "agent," "tool use," "human-in-the-loop") will be aligned with definitions established by AAIF-wide glossary or ontology efforts
+  - The threat landscape for agentic systems is rapidly evolving; WG outputs are expected to be living documents subject to periodic revision
+- **Dependencies:** 
+  - Peer AAIF working groups for shared terminology, ethics handoffs, and co-authored cross-WG deliverables
+  - External specifications referenced by WG outputs (e.g., MCP Spec), whose evolution may drive revisions to deliverables
 
 ### 4. Goals, Deliverables, and Success Criteria
 
@@ -67,10 +73,10 @@ The work of this WG supports:
 For each deliverable, define owner, format, and target date.
 
 - **Taxonomy of Terms and Definitions (v0)** — Format: Spec, Target: 2026-06-01
+- **Cross-WG Security and Privacy Review Checklist** — Format: Report, Target: 2026-06-01
+- **Agentic AI Threat Modeling: Gap Analysis and Framework Design** — Format: Report, Target: 2026-07-01
 - **Security and Privacy Design Patterns Catalog** — Format: Spec, Target: 2026-10-01
 - **Agentic AI Security Best Practices Guide** — Format: Report, Target: 2026-10-01
-- **Agentic AI Threat Modeling: Gap Analysis and Framework Design** — Format: Report, Target: 2026-07-01
-- **Cross-WG Security and Privacy Review Checklist** — Format: Report, Target: 2026-06-01
 
 #### Definition of Done (DoD)
 
@@ -153,24 +159,24 @@ To join, a participant should sign up via the AAIF working group registration fo
 - **Default method:** rough consensus documented in issues/meeting notes.
 - **When consensus cannot be reached:**
   - **Escalation path:** TC
-  - **Fallback vote rules (if used):** quorum [%], threshold — simple majority, voting eligibility — all active members.
+  - **Fallback vote rules (if used):** quorum (51%), threshold — simple majority, voting eligibility — all active members.
 
 #### Quorum (if voting is used)
 
-Quorum is met when 50% eligible voters are present or 50% have responded asynchronously.
+Quorum is met when 51% eligible voters are present or 51% have responded asynchronously.
 
 ### 8. Relationship to Other Groups
 
 #### Internal Coordination
 
-- **Liaison(s) to other WGs:** [Names/roles]
-- **Shared deliverables/dependencies:** [list]
+- **Liaison(s) to other WGs:** TBD as delegated by Chair
+- **Shared deliverables/dependencies:** Cross-WG Security and Privacy Review Checklist
 
 #### External Coordination (optional)
 
-- **Standards bodies / industry groups:** [names]
-- **Upstream/downstream projects:** [names]
-- **Policy for external statements:** [who can speak on behalf of WG]
+- **Standards bodies / industry groups:** MCP Spec
+- **Upstream/downstream projects:** Interceptors, MCP Apps, etc.
+- **Policy for external statements:** Chair/Co-Chair or as delegated by Chair
 
 ### 9. Intellectual Property, Licensing, and Compliance
 
@@ -178,12 +184,12 @@ Quorum is met when 50% eligible voters are present or 50% have responded asynchr
 
 #### Licensing
 
-- **Code contributions:** [e.g., Apache-2.0/MIT] (or "per repository license")
-- **Documentation/specs:** [e.g., CC-BY-4.0] (or "per repository license")
+- **Code contributions:** Apache 2.0 or MIT as appropriate per deliverable
+- **Documentation/specs:** CC-BY-4.0 or CC-BY-SA 4.0 as appropriate per deliverable
 
 #### Contribution Requirements
 
-Contributions must comply with: [DCO/CLA policy], repository contribution guidelines, and review requirements.
+Contributions must comply with: DCO policy, repository contribution guidelines, and review requirements.
 
 #### Antitrust and Competition Law
 
@@ -198,43 +204,61 @@ This WG adheres to the Linux Foundation Project's Code of Conduct.
 
 #### Security Practices
 
-- **Threat modeling expectations:** [required/optional]
-- **Vulnerability disclosure process:** [link or description]
-- **Security review gates for releases:** [e.g., dependency scanning, SAST, SBOM]
+- **Threat modeling expectations:** required
+- **Vulnerability disclosure process:** TBD as deliverables evolve
+- **Security review gates for releases:** dependency scanning
 
 #### Agentic Safety and Risk Management
 
-- **Safety considerations relevant to this WG:** [e.g., tool access control, prompt injection defenses, autonomy bounds]
-- **Required practices (if any):** [e.g., evaluation harnesses, red teaming, abuse case documentation]
-- **Data handling expectations:** [e.g., avoid sensitive data in issues/logs]
+- **Safety considerations relevant to this WG:**
+  - Human-in-the-loop requirements and autonomy bounds for agentic systems
+  - Prompt injection and indirect prompt injection defenses
+  - Tool and resource access control (principle of least privilege)
+  - Cascading failure and unintended side-effect risks in multi-agent systems
+  - Escalation and override mechanisms for high-stakes actions
+  - Goal drift, reward hacking, and misalignment detection
+  - Transparency and auditability of agent decision chains
+
+- **Required practices (if any):**
+  - Red teaming and adversarial testing of proposed frameworks and reference implementations
+  - Abuse case and failure mode documentation for all published specifications
+  - Evaluation harnesses for safety-critical properties (e.g., containment, reversibility, corrigibility)
+  - Threat modeling for new capability additions or scope changes
+  - Periodic review of WG outputs against emerging real-world incident data
+
+- **Data handling expectations:**
+  - No sensitive, proprietary, or personally identifiable data in issues, pull requests, meeting logs, or public artifacts
+  - Use synthetic or anonymized data in examples, test cases, and benchmarks
+  - Clearly label any risk scenarios or attack descriptions to prevent misuse outside of their intended safety context
+  - Follow the AAIF data governance policy for any shared datasets or evaluation corpora
 
 #### Privacy
 
-- **Guidance for handling personal data:** [policy link/summary]
-- **Logging/telemetry guidelines:** [what is acceptable]
+- **Guidance for handling personal data:** This workgroup does not access, store, or handle personal data.
+- **Logging/telemetry guidelines:** No data collection.
 
 ### 11. Deliverable Lifecycle and Publication
 
 #### Release Cadence
 
-- **Expected cadence:** [quarterly/biannual/annual/as needed]
-- **Versioning scheme:** [SemVer/date-based/spec versioning]
+- **Expected cadence:** as needed
+- **Versioning scheme:** SemVer
 
 #### Review and Approval
 
-- **Required reviewers:** [roles]
-- **Approval mechanism:** [LGTM count, maintainer approval, chair sign-off]
+- **Required reviewers:** Deliverable owner, deliverable contributor
+- **Approval mechanism:** Approval count (> 1), Deliverable owner approval, chair approval (as needed)
 
 #### Archival / Deprecation
 
-- **Deprecation policy:** [how and when]
-- **Sunset criteria:** [e.g., no activity for N months, goals achieved]
+- **Deprecation policy:** deliverables are deprecated when they no longer provide value or are otherwise outdated with no on-going maintenance
+- **Sunset criteria:** goals achieved, no longer relevant, unmaintained/unable to maintain
 
 ### 12. Resources and Budget (Optional)
 
-- **Expected infrastructure needs:** [CI, hosting, domains]
-- **Funding requests (if any):** [events, audits, tooling]
-- **Sponsor engagement model (if applicable):** [brief description]
+- **Expected infrastructure needs:** Github, Zoom, Slack/Discord
+- **Funding requests (if any):** TBD
+- **Sponsor engagement model (if applicable):** TBD
 
 ### 13. Amendments
 
