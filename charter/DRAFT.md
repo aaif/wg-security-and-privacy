@@ -5,9 +5,9 @@
 ### 1. Working Group Name
 
 - **Working Group Name:** Security & Privacy
-- **Short Name / Acronym:** S&P
+- **Short Name / Acronym:** SPAA (Security & Privacy for Agentic AI)
 - **Date Approved:** TBD
-- **Last Updated:** 2026-04-17
+- **Last Updated:** 2026-04-29
 - **Homepage / Repo:** https://github.com/aaif/wg-security-and-privacy
 - **Primary Contact (Chair/Lead):** Alex Frazer (Chair) <alex@runlayer.com>
 
@@ -21,7 +21,7 @@ The Security & Privacy Working Group advances the Agentic AI Foundation's missio
 
 This Working Group was formed to address:
 
-- Agentic AI introduces novel security challenges — such as multi-agent persuasion, tool invocation risks, delegated authorization boundaries, and agent memory vulnerabilities — that are not adequately covered by existing frameworks.
+- Agentic AI introduces security challenges that existing frameworks do not adequately address. Examples include prompt injection, confused deputy, authorization boundary violations, tool invocation risks, and agent memory vulnerabilities, among others.
 - Privacy risks expand as AI agents operate autonomously across services, handling sensitive data with limited human oversight and increasing blast radius when failures occur.
 - The ecosystem lacks a shared vocabulary, reusable design patterns, and open threat models specific to agentic AI security and privacy.
 
@@ -29,7 +29,7 @@ This Working Group was formed to address:
 
 The work of this WG supports:
 
-- Pre-competitive collaboration that produces open outputs benefiting the entire agentic AI ecosystem, not just individual members.
+- A shared substrate of threat models, taxonomies, and design patterns that other AAIF working groups, providers, and consumers can build on directly, so that the security and privacy foundations of agentic AI are derived once and adopted broadly across the ecosystem.
 - Security and privacy as an intersecting layer across all AAIF working groups, providing a shared discipline that strengthens every group's deliverables.
 
 ### 3. Scope
