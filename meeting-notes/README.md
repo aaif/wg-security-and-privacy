@@ -4,6 +4,7 @@ All meeting notes for the Security and Privacy Working Group, listed in reverse 
 
 | Date | Link | Summary |
 |------|-------|---------| 
+| 2026-04-28 | [Full notes](2026-04-28.md) | Charter TC vote fell short procedurally (4 approvals, 5 non-votes) but WG will proceed as approved given no substantive objections. Taxonomy chosen as the first cross-WG collaboration. Time-zone and meeting-cadence options discussed; next meeting moved to 6 am Pacific to include new AAIF CTO Manik. MCP Interceptors (2026-04-30) and MCP Apps (2026-05-05) meetings flagged. |
 | 2026-04-14 | [Full notes](2026-04-14.md) | Scope, five initial deliverables, and charter all approved unanimously via formal vote. MCP Dev Summit updates shared (Interceptors, MCP Apps). TC presentation scheduled for the following week. |
 | 2026-03-31 | [Full notes](2026-03-31.md) | Mission statement option G adopted. Scope discussed at length — privacy engineering vs. regulatory compliance, agent identity split with Identity and Trust WG, and auditability deliverable framing. Deliverable decisions deferred to April 14th meeting. |
 | 2026-03-17 | [Full notes](2026-03-17.md) | Mission statement direction debated (trust-centered with hybrid builder elements favored). Scope proposals reviewed with cross-WG coordination model discussed. Five potential deliverables outlined; taxonomy remains first in progress. |
