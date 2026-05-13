@@ -6,7 +6,7 @@
 
 - **Working Group Name:** Security & Privacy
 - **Short Name / Acronym:** SPAA (Security & Privacy for Agentic AI)
-- **Date Approved:** TBD
+- **Date Approved:** 2026-05-13
 - **Last Updated:** 2026-04-29
 - **Homepage / Repo:** https://github.com/aaif/wg-security-and-privacy
 - **Primary Contact (Chair/Lead):** Alex Frazer (Chair) <alex@runlayer.com>
