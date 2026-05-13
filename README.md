@@ -1,6 +1,6 @@
 # Security and Privacy Working Group
 
-For more information, review the Working Group Charter (*coming soon*).
+For more information, review the Working Group Charter: [charter.md](charter/charter.md).
 
 ## Mission
 
