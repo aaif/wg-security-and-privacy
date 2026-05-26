@@ -43,7 +43,7 @@ If someone from an AAIF member organization would like to join, please [sign up 
 
 [Running Notes Doc](https://docs.google.com/document/d/10xX5Ng6SOIrvbSpHn8aAW2vIi_VGrV-JdahCyEl-uLM/edit?usp=sharing)
 
-All meeting recordings and AI summaries can be found on your [LFX Individual Dashboard](openprofile.dev). Create a Linux Foundation (LFX) account to see all meetings, AI summaries, recordings, etc. all in one place.
+All meeting recordings and AI summaries can be found on your [LFX Individual Dashboard](https://openprofile.dev). Create a Linux Foundation (LFX) account to see all meetings, AI summaries, recordings, etc. all in one place.
 
 
 ## Repository Structure
