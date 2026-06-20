@@ -13,8 +13,6 @@ Topic areas include:
 - Post-incident forensics
 - A curated reference section to external frameworks and resources
 
-This guide pairs with the Design Patterns Catalog and consolidates practical security guidance into a single starting point for builders. Agent identity and authorization are contributed to the Identity & Trust WG via the Cross-WG Review Checklist rather than re-specified here.
-
 ## Leads
 
 | Name | Affiliation |

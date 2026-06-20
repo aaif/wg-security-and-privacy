@@ -6,8 +6,6 @@ Evaluate existing AI threat model frameworks (e.g., CSA MAESTRO, OWASP, NIST AI 
 
 The output is a gap analysis and guidance document. It establishes whether a sufficient model already exists or whether agentic-specific gaps warrant new framework work, and it feeds into the downstream Design Patterns Catalog and Best Practices Guide.
 
-This is the most near-term WG-led deliverable.
-
 ## Leads
 
 | Name | Affiliation |

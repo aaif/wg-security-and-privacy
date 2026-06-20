@@ -14,8 +14,6 @@ Topic areas include:
 - Agent containment and runtime intervention (kill switches, rollback, permission downgrade, off-task detection)
 - Agent authorization models
 
-This catalog is sequenced after the Threat Modeling Gap Analysis and pairs with the higher-level Best Practices Guide as the more technical, implementation-oriented of the two.
-
 ## Leads
 
 | Name | Affiliation |
