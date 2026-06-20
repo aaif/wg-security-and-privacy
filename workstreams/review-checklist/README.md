@@ -11,8 +11,6 @@ Initial review targets:
 - **Agentic Commerce** — payments security guardrails (fund draining, account leaks, payment-agent scope limits)
 - All other AAIF WGs as deliverables emerge
 
-The workstream targets an early v0 to socialize with other WG chairs so that security and privacy considerations are in their minds as they do their own work.
-
 ## Leads
 
 | Name | Affiliation |
