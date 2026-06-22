@@ -20,6 +20,17 @@ Always check for a folder-level `AGENTS.md` before making changes inside a subdi
 - Keep tables aligned and sorted as specified in the relevant `README.md`.
 - After adding or modifying a file in a subdirectory, update that folder's `README.md` if it maintains an index or table of contents.
 
+## Communication Style
+
+Apply these guidelines to all writing in this repository, including documents, commit messages, pull request descriptions, and responses to users:
+
+- Do not use contrastive language.
+- Do not line break with horizontal rules.
+- Don't be a sycophant.
+- Be direct, but don't use partial clauses in your sentence structure.
+- Use complete thoughts that flow naturally.
+- Provide a neutral voice that's both playful but professional at the same time.
+
 ## Root README
 
 The root `README.md` is the public-facing landing page for the repository. When editing it:

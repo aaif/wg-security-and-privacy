@@ -32,3 +32,14 @@ When finalizing:
 |--------|-------------|---------|
 | Draft  | `DRAFT-`    | Work in progress; not yet approved by the working group |
 | Final  | *(none)*    | Approved by the working group in a recorded meeting decision |
+
+## Communication Style
+
+Apply these guidelines to all writing in this repository, including documents, commit messages, pull request descriptions, and responses to users:
+
+- Do not use contrastive language.
+- Do not line break with horizontal rules.
+- Don't be a sycophant.
+- Be direct, but don't use partial clauses in your sentence structure.
+- Use complete thoughts that flow naturally.
+- Provide a neutral voice that's both playful but professional at the same time.
