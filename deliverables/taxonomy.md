@@ -16,4 +16,4 @@ The Security and Privacy WG contributed its original taxonomy draft as a startin
 - Jay White
 - Katherine Druckman
 
-The taxonomy began inside this working group and was elevated to a cross-WG AAIF initiative ([2026-05-12](../meeting-notes/2026-05-12.md)). Junjie Bu was appointed to lead it ([2026-05-26](../meeting-notes/2026-05-26.md)), and the WG named its delegates on [2026-06-09](../meeting-notes/2026-06-09.md). The original draft and its full revision history remain available in this repository's git history.
+The taxonomy began inside this working group and was elevated to a cross-WG AAIF initiative ([2026-05-12](../meeting-notes/2026-05-12.md)). Junjie Bu was appointed to lead it ([2026-05-26](../meeting-notes/2026-05-26.md)), and the WG named its delegates on [2026-06-09](../meeting-notes/2026-06-09.md).
