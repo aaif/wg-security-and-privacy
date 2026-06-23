@@ -26,12 +26,21 @@ When finalizing:
 2. Update the `README.md` table: change the status to **Final**, update the link to the new filename, and set the last modified date.
 3. Add a note at the top of the deliverable referencing the meeting that approved it (e.g., `> Approved by the working group on YYYY-MM-DD ([meeting notes](../meeting-notes/YYYY-MM-DD.md)).`).
 
+## Moving a Deliverable to Another Workstream
+
+When a deliverable is handed off to a cross-WG workstream or another repository, turn it into a redirect so its history and inbound links stay intact.
+
+1. Replace the deliverable file's content with a short redirect note that records the new home, links to the destination repository, and explains how this WG stays involved.
+2. Keep the existing filename so inbound links continue to resolve.
+3. In the `README.md` table, set the status to **Moved**, update the last modified date, and point the link to the destination repository.
+
 ## Status Values
 
 | Status | File Prefix | Meaning |
 |--------|-------------|---------|
 | Draft  | `DRAFT-`    | Work in progress; not yet approved by the working group |
 | Final  | *(none)*    | Approved by the working group in a recorded meeting decision |
+| Moved  | *(retained)* | Handed off to another workstream or repository; the file remains as a redirect to the new home |
 
 ## Communication Style
 
