@@ -22,9 +22,14 @@ Save each report as `YYYY-MM-report.md` using the year and month of the reportin
 6. List **Blockers and Risks**. If none, write "None this month."
 7. List **Decisions Needed from the TC** as explicit asks. If none, write "None."
 8. List the top 2-3 priorities under **Next Month's Focus**.
-9. Add relevant PRs, issues, releases, meeting notes, and dashboards under **Metrics / Links**.
+9. Under **Metrics / Links**, report status against the charter Success Metrics (KPIs) defined in `../charter/charter.md`: Adoption, Quality, Community, and Timeliness. Include concrete figures where available, such as average meeting attendance. List supporting links (PRs, issues, releases, meeting notes, dashboards) after the KPI status.
 10. Open a pull request titled `[Report] WG Security & Privacy – Month YYYY` (e.g. `[Report] WG Security & Privacy – June 2026`) and add the TC (or the designated TC GitHub team) as reviewers.
 11. Add a row to the table in `README.md` for the new report. Insert the row at the top of the table (below the header) so reports remain in descending order by reporting period. The row should contain the reporting period (`YYYY-MM`), a link labeled "Full report" pointing to the report file, and a 1-2 sentence summary of the month.
+
+## Sourcing and Accuracy
+
+- Base every item on recorded evidence: meeting notes, workstream READMEs, the charter, and git history. Do not invent progress. When something is not recorded, ask the chair or leave it out.
+- Verify status claims against the repository before writing them. Check the git history and `../deliverables/README.md` before you describe a deliverable as committed, final, or shipped. When content has been discussed and is not yet in the repo, describe it as "drafted" or "in progress."
 
 ## Style Guidance
 
