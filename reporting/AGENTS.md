@@ -19,12 +19,13 @@ Save each report as `YYYY-MM-report.md` using the year and month of the reportin
 3. Fill in the header fields: **Reporting period** (`Month YYYY`) and **Date submitted** (`YYYY-MM-DD`). Leave **Working Group** and **Chair(s)** as-is unless they have changed.
 4. Write a 2-3 sentence **Summary** capturing the month at a glance.
 5. Populate **Progress Against Objectives**, tying items back to stated objectives where possible.
-6. List **Blockers and Risks**. If none, write "None this month."
-7. List **Decisions Needed from the TC** as explicit asks. If none, write "None."
-8. List the top 2-3 priorities under **Next Month's Focus**.
-9. Under **Metrics / Links**, report status against the charter Success Metrics (KPIs) defined in `../charter/charter.md`: Adoption, Quality, Community, and Timeliness. Include concrete figures where available, such as average meeting attendance. List supporting links (PRs, issues, releases, meeting notes, dashboards) after the KPI status.
-10. Open a pull request titled `[Report] WG Security & Privacy – Month YYYY` (e.g. `[Report] WG Security & Privacy – June 2026`) and add the TC (or the designated TC GitHub team) as reviewers.
-11. Add a row to the table in `README.md` for the new report. Insert the row at the top of the table (below the header) so reports remain in descending order by reporting period. The row should contain the reporting period (`YYYY-MM`), a link labeled "Full report" pointing to the report file, and a 1-2 sentence summary of the month.
+6. Summarize **Ecosystem Highlights**. For members who engage with external groups (e.g. OWASP, AARM, MCP ACS), note the relevant activity, publications, or decisions happening in those groups. If none, write "None this month."
+7. List **Blockers and Risks**. If none, write "None this month."
+8. List **Decisions Needed from the TC** as explicit asks. If none, write "None."
+9. List the top 2-3 priorities under **Next Month's Focus**.
+10. Under **Metrics / Links**, report status against the charter Success Metrics (KPIs) defined in `../charter/charter.md`: Adoption, Quality, Community, and Timeliness. Include concrete figures where available, such as average meeting attendance. List supporting links (PRs, issues, releases, meeting notes, dashboards) after the KPI status.
+11. Open a pull request titled `[Report] WG Security & Privacy – Month YYYY` (e.g. `[Report] WG Security & Privacy – June 2026`) and add the TC (or the designated TC GitHub team) as reviewers.
+12. Add a row to the table in `README.md` for the new report. Insert the row at the top of the table (below the header) so reports remain in descending order by reporting period. The row should contain the reporting period (`YYYY-MM`), a link labeled "Full report" pointing to the report file, and a 1-2 sentence summary of the month.
 
 ## Sourcing and Accuracy
 

@@ -33,6 +33,12 @@ Delete these comments before submitting.
 -
 -
 
+## Ecosystem Highlights
+
+<!-- For members who engage with external groups (e.g. OWASP, AARM, MCP ACS), what relevant activity, publications, or decisions are happening in those groups? Note "None this month" if applicable. -->
+
+-
+
 ## Blockers and Risks
 
 <!-- Anything the TC should be aware of. Note "None this month" if applicable. -->
