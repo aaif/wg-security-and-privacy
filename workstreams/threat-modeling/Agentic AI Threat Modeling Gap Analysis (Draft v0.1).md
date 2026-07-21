@@ -3,6 +3,7 @@ Working Group: Security & Privacy (AAIF)
 Deliverable: 2 of 5, Agentic AI Threat Modeling - Gap Analysis and Framework Design
 Status: Draft v0.1, for WG review
 Lead: Fernando Lucktemberg
+Co-lead: Alon Mazor
 ---
 
 # Agentic AI Threat Modeling: Gap Analysis and Framework Design
