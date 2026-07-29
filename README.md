@@ -1,6 +1,6 @@
 # Security and Privacy Working Group
 
-For more information, review the Working Group Charter: [charter.md](charter/charter.md).
+For more information, review the [Working Group Charter](charter/charter.md).
 
 ## Mission
 
@@ -19,8 +19,6 @@ Current term for the Working Group Chairs is **March 1, 2026 - January 31, 2027*
 
 This working group meets **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=10:00AM&tz=San%20Francisco)).
 
-**Next meeting:** July 7, 2026
-
 | Timezone | Time |
 | --- | --- |
 | PT / US (PST / UTC-8) | 10:00 AM |
@@ -32,19 +30,13 @@ This working group meets **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Tim
 | CST / China (UTC+8) | 2:00 AM +1 |
 | JST / Japan (UTC+9) | 3:00 AM +1 |
 
-**[Join the Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91539659750?password=59701aab-9082-4ab4-8115-a18c11039c4b)** - Please note the meeting link will only work for those that have signed up for the working group.
-
-**Working Group Meetings are only open to AAIF members at this time.** Participants must be invited to join. 
-
-If someone from an AAIF member organization would like to join, please [sign up here](https://forms.gle/mqvEADnhCsmsvmC69) using your business email address.
-
+**[Join the Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91539659750?password=59701aab-9082-4ab4-8115-a18c11039c4b)** 
 
 ## Meeting Agenda and Minutes
 
 [Running Notes Doc](https://docs.google.com/document/d/10xX5Ng6SOIrvbSpHn8aAW2vIi_VGrV-JdahCyEl-uLM/edit?usp=sharing)
 
-All meeting recordings and AI summaries can be found on your [LFX Individual Dashboard](https://openprofile.dev). Create a Linux Foundation (LFX) account to see all meetings, AI summaries, recordings, etc. all in one place.
-
+All meeting recordings and AI summaries can be found at [app.lfx.dev](https://app.lfx.dev). Create a Linux Foundation (LFX) account to see all meetings, AI summaries, recordings, etc. all in one place.
 
 ## Repository Structure
 
@@ -56,16 +48,14 @@ All meeting recordings and AI summaries can be found on your [LFX Individual Das
 
 ## Communication
 
-Reach out on the private working group mailing list: wg-security-privacy@lists.aaif.io
+Join the public working group [mailing list](https://lists.aaif.io/g/wg-security-privacy): wg-security-privacy@lists.aaif.io
 
-Join the private Working Group [Discord channel](https://discord.gg/BAzqNsGctj). **(Please do not share this link publicly; it is for Working Group members only).**
+Reach out on the public Working Group [Discord channel](https://discord.com/channels/1461090924791595243/1463637113831686154). New to the AAIF Discord Server? [Join here](https://discord.com/invite/9zTwngHAMy). 
 
 Need help? email: support@aaif.io.
 
 ## Join a Working Group
-The TC supports multiple technical working groups. **Working Groups are only open to AAIF members at this time.** Participants must be invited to join. 
-
-If someone from an AAIF member organization would like to join, please [sign up here](https://forms.gle/mqvEADnhCsmsvmC69) using your business email address.
+The TC supports multiple technical working groups. Working Groups are open to the public and cross-functional participation is actively encouraged. [View the full calendar of public meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/agentic-ai-foundation). 
 
 The current list of working groups are:
    - Accuracy & Reliability
@@ -75,6 +65,7 @@ The current list of working groups are:
    - Observability & Traceability
    - Security & Privacy
    - Workflows & Process Integration
+   - Taxonomy & Landscape (a Cross-Working Group Workstream)
 
 ## Commitment to Neutrality
 
