@@ -19,6 +19,8 @@ Current term for the Working Group Chairs is **March 1, 2026 - January 31, 2027*
 
 This working group meets **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=10:00AM&tz=San%20Francisco)).
 
+**Next meeting:** August 4, 2026
+
 | Timezone | Time |
 | --- | --- |
 | PT / US (PST / UTC-8) | 10:00 AM |
