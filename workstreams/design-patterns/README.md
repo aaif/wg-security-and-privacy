@@ -25,6 +25,7 @@ Topic areas include:
 
 | Name | Affiliation |
 |------|-------------|
+| Aditya Gidh | IBM |
 | Aileen Schultz | TELUS |
 | Govindaraj Palanisamy | Global Payments |
 | Hsiao-Ying Lin | Huawei |

@@ -24,6 +24,7 @@ Topic areas include:
 
 | Name | Affiliation |
 |------|-------------|
+| Aditya Gidh | IBM |
 | Allie Howe | Keycard |
 | Alon Mazor | Ocean Security |
 | Bar Kaduri | Capsule |
