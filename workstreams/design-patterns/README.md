@@ -14,6 +14,12 @@ Topic areas include:
 - Agent containment and runtime intervention (kill switches, rollback, permission downgrade, off-task detection)
 - Agent authorization models
 
+## Patterns in progress
+
+| Pattern | Topic area | Status |
+|---------|-----------|--------|
+| [Attested Isolated Runtime](../../deliverables/DRAFT-attested-isolated-runtime.md) | Privacy-preserving execution | Draft |
+
 ## Leads
 
 | Name | Affiliation |
