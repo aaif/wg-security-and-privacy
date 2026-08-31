@@ -62,6 +62,7 @@ This section covers two adjacent attack surfaces that production deployments enc
 1. **Tier 1 - automated pre-scan, required for all skills.** Run Cisco Skill Scanner (static pattern matching, behavioral dataflow analysis, optional LLM-based semantic review) or Snyk Agent Scan. Any Critical or High finding disqualifies the skill from proceeding without remediation.
 2. **Tier 2 - manual structural review, required for skills requesting elevated permissions.** Check the `allowed-tools` field against the stated purpose (a text formatter requesting `Bash`/`Write`/`WebFetch` is a mismatch); scan bundled scripts for calls to undeclared domains, `eval()`/Base64-obscured code, or file paths reaching toward `~/.ssh` or `~/.aws`; verify author attribution.
 3. **Tier 3 - organizational trust registry, required for production.** Pin approved skills to a specific version and hash; assign a named accountable owner distinct from the requester; require re-verification on any update.
+4. **Tier 4 - runtime behavioral monitoring, required for skills with elevated permissions or production deployment.** Monitor executed behavior against the declared `allowed-tools` scope and Tier 2 baseline; flag any invocation touching a domain, file path, or tool absent from the approval record. See Section 5 (Evaluation Frameworks) for behavioral baselining implementation.
 
 **Environment risk stratification** determines blast radius independent of the skill itself , apply this before verification controls, not instead of them:
 
@@ -144,6 +145,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | Tool invocation - MCP gateway (OSS) | Linux Foundation agentgateway | Open Source | Beta | Free | Kubernetes-native; supports MCP and A2A |
 | Supply chain - skill scanning | Cisco Skill Scanner | Open Source | Beta | Free | Static + behavioral dataflow + optional LLM review |
 | Supply chain - skill scanning | Snyk Agent Scan | Open Source / Commercial | Beta | Free/Moderate | 90–100% recall on confirmed-malicious skills in vendor testing |
+| Supply chain - skill scanning | NVIDIA SkillSpector | Open Source | Beta | Free | 71 vulnerability patterns across 17 categories; two-stage static + optional LLM analysis; Apache 2.0; part of NVIDIA Verified Skills pipeline |
 | Supply chain - SBOM baseline | Syft / Grype (Anchore) | Open Source | GA | Free | Traditional SBOM + CVE scanning; CI/CD native |
 | Guardrails - HITL orchestration | LangGraph | Open Source | GA | Free | Static/dynamic interrupts; native checkpointing |
 | Guardrails - input/output | NeMo Guardrails (NVIDIA) | Open Source | GA | Free | Input/output moderation, jailbreak detection |
