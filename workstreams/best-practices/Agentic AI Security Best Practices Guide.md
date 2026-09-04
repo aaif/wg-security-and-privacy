@@ -60,7 +60,11 @@ This section covers two adjacent attack surfaces that production deployments enc
 
 ### 3.2 Supply Chain & Skill Verification
 
-**The failure pattern.** Cisco's scan of 31,132 marketplace skills found 26.1% contained at least one vulnerability; supply-chain characteristics co-occurred with data-exfiltration patterns in 81% of confirmed malicious skills. Snyk's ToxicSkills study found 10.9% of scanned skills exposed secrets or hardcoded credentials outright. The Cato CTRL proof-of-concept showed how low the bar is: a single inserted function call in an otherwise-legitimate, open-source skill delivered ransomware, with the skill's stated purpose and description unchanged. The deeper structural problem is the **consent gap**: approving a skill's first execution can authorize a scope of action broader than what was previewed, and that approval persists as a standing grant , not a one-time decision , until explicitly revoked.
+**The failure pattern.** Cisco's scan of 31,132 marketplace skills found 26.1% contained at least one vulnerability; supply-chain characteristics co-occurred with data-exfiltration patterns in 81% of confirmed malicious skills. Snyk's ToxicSkills study found 10.9% of scanned skills exposed secrets or hardcoded credentials outright. The Cato CTRL proof-of-concept showed how low the bar is: a single inserted function call in an otherwise-legitimate, open-source skill delivered ransomware, with the skill's stated purpose and description unchanged. The deeper structural problem is the **consent gap**: approving a skill's first execution can authorize a scope of action broader than what was previewed, and that approval persists as a standing grant, not a one-time decision, until explicitly revoked.
+
+Skills are not the only artifact in the supply chain. MCP server packages are distributed software with their own binary supply chain, independent of the protocol they speak. A2A Agent Cards are metadata documents an orchestrator consumes to decide what to trust and invoke from a remote agent. Each carries distinct failure modes and requires its own verification controls.
+
+#### 3.2.1 Skills
 
 **The control: a four-tier verification model.**
 
@@ -69,7 +73,27 @@ This section covers two adjacent attack surfaces that production deployments enc
 3. **Tier 3 - organizational trust registry, required for production.** Pin approved skills to a specific version and hash; assign a named accountable owner distinct from the requester; require re-verification on any update.
 4. **Tier 4 - runtime behavioral monitoring, required for skills with elevated permissions or production deployment.** Monitor executed behavior against the declared `allowed-tools` scope and Tier 2 baseline; flag any invocation touching a domain, file path, or tool absent from the approval record. See Section 5 (Evaluation Frameworks) for behavioral baselining implementation.
 
-**Environment risk stratification** determines blast radius independent of the skill itself , apply this before verification controls, not instead of them:
+#### 3.2.2 MCP Server Packages
+
+**The failure pattern.** An MCP server is a distributed software package (npm, PyPI, or container image) with a full binary supply chain independent of the protocol it speaks. CVE-2025-6514 (mcp-remote, CVSS 9.6) was not a protocol attack — it was a compromised package executing arbitrary code on connection. A server that passes verification today can be backdoored in its next release; version-pinned deployments are the only protection against silent updates.
+
+**The control: three verification steps.**
+
+1. **Step 1 - SBOM scan before any production connection.** Generate a software bill of materials (Syft) and scan for known CVEs (Grype) against the server package and all transitive dependencies. Any Critical or High finding blocks the connection until remediated.
+2. **Step 2 - version pinning and publisher verification.** Pin the approved server to a specific version hash in your organizational registry; verify the source repository matches the declared publisher; treat any version update as untrusted until Step 1 completes again. For containerized deployments, require image signing (Sigstore/cosign) and verify the signature before instantiation.
+3. **Step 3 - update monitoring.** Subscribe to the server package's release feed and treat any new version as blocked by default until Steps 1 and 2 complete. This closes the same rug-pull window that Section 3.1 addresses at the protocol layer, but at the binary layer.
+
+#### 3.2.3 A2A Agent Cards
+
+**The failure pattern.** The A2A Agent Card (`/.well-known/agent-card.json`) is the metadata an orchestrator consumes to decide what to trust and invoke from a remote A2A agent — the structural equivalent of an MCP tool description. It declares the agent's skills, authentication requirements, and service endpoint. The A2A spec's default well-known URI discovery has no built-in integrity verification: any party who can serve that path can substitute a poisoned card. Skill description fields in Agent Cards carry the same prompt-injection risk as MCP tool description fields. Authentication scheme declarations can be downgraded or replaced to redirect credential acquisition to an attacker-controlled endpoint. There is no standard re-verification trigger when a card changes after initial approval.
+
+**The control: three verification steps.**
+
+1. **Step 1 - hash and pin at first approval.** On first contact with an A2A agent, record a content hash of the Agent Card and store it in your organizational registry alongside the approved agent identity. This is the baseline for all subsequent change detection.
+2. **Step 2 - re-verify on every session start.** Fetch the Agent Card at the start of each session and compare its hash against the registry record before invoking any skill. Any change to skill descriptions, authentication schemes, or the service endpoint must be treated as an unapproved update and routed through re-review at the tier the agent's declared permissions require. This closes the same rug-pull window Section 3.1 addresses for MCP tool descriptions.
+3. **Step 3 - restrict discovery to a curated registry.** Do not rely on open well-known URI resolution for production agents. The A2A spec describes curated registries as the standard approach for enterprise environments, providing centralized management, capability-based discovery, and support for access controls and trust frameworks. Maintain a registry of approved Agent Cards under organizational control; require authenticated extended cards for any agent with elevated access rather than accepting unauthenticated public cards.
+
+**Environment risk stratification** determines blast radius independent of the artifact type — apply this before verification controls, not instead of them:
 
 | Environment | Network Access | Filesystem Access | Blast Radius |
 |---|---|---|---|
@@ -77,7 +101,7 @@ This section covers two adjacent attack surfaces that production deployments enc
 | Sandbox mode enabled, working-directory scoped | Allowlisted only | Current working directory | Contained |
 | No sandbox | Full | Full user account | Enterprise-wide |
 
-**Quick start.** Enable OS-level sandbox mode across all developer environments before building any review pipeline , it is a configuration change, not a process build, and it reduces the blast radius of any unverified skill from full system access to working-directory scope.
+**Quick start.** Enable OS-level sandbox mode across all developer environments before building any review pipeline — it is a configuration change, not a process build, and it reduces the blast radius of any unverified artifact from full system access to working-directory scope.
 
 ## 4. Guardrails
 
@@ -173,6 +197,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | CVE-2025-68664 (LangGrinch), CVE-2025-6514 (mcp-remote), CVE-2025-49596 (MCP Inspector) | CVE Record | Section 2 and 3.1 incident grounding |
 | Cisco AI Threat and Security Research, arXiv:2601.10338 and arXiv:2602.06547; Snyk ToxicSkills Study (Feb 2026) | Peer-Reviewed / Vendor Research | Section 3.2 |
 | Cato CTRL, "Weaponizing Claude Skills with MedusaLocker" (2025) | Vendor Report | Section 3.2 |
+| A2A Protocol Specification, Agent Discovery and Enterprise Implementation (a2aproject/A2A, docs/topics/agent-discovery.md and enterprise-ready.md) | Open Standard | Section 3.2.3 |
 | Palo Alto Networks Unit 42, MCP attack vectors research | Vendor Report | Section 3.1 |
 | NIST SP 800-53 Rev. 5 (AU-9, AU-10, AU-5); EU AI Act Article 12 (Regulation (EU) 2024/1689) | Standards Body / Regulatory Text | Section 6 |
 | Anthropic, "Reasoning Models Don't Always Say What They Think" (2025); Anthropic Petri (2025) | Vendor Research | Section 5 |
