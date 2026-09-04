@@ -198,6 +198,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | Guardrails - input/output | NeMo Guardrails (NVIDIA) | Open Source | GA | Free | Input/output moderation, jailbreak detection |
 | Guardrails - PII | Presidio (Microsoft) | Open Source | GA | Free | PII identification/anonymization at ingestion |
 | Guardrails - inter-agent comms & policy | Dapr | Open Source | GA | Free | mTLS sidecar isolation between agents, service-invocation access-control allowlists, OPA policy middleware, secrets API abstraction over Vault/Cloud stores, workflow level tool-access policies (to gate/block tools), PII scrubbing and input/output hooks |
+| Guardrails - execution isolation | gVisor / Firecracker | Open Source | GA | Free | Kernel- and microVM-level sandboxing for agent-generated code and tool execution with ephemeral per-task environments |
 | Eval - pre-deployment | OWASP FinBot (genai.owasp.org) | Framework / CTF | GA | Free | Hands-on Agentic Top 10 exposure |
 | Eval - misalignment auditing | Anthropic Petri | Open Source | GA | Free | Found misalignment behavior across 111 of 111 tested scenarios |
 | Forensics - observability | Langfuse | Open Source / Managed | GA | Free/Moderate | Session-level tracing; GDPR-native design |
