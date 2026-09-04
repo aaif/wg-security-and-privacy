@@ -194,6 +194,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | Supply chain - skill scanning | NVIDIA SkillSpector | Open Source | Beta | Free | Two-stage static + optional LLM analysis across prompt injection, supply chain, excessive agency, and MCP-specific patterns; Apache 2.0; part of NVIDIA Verified Skills pipeline |
 | Supply chain - SBOM baseline | Syft / Grype (Anchore) | Open Source | GA | Free | Traditional SBOM + CVE scanning; CI/CD native |
 | Guardrails - HITL orchestration | LangGraph | Open Source | GA | Free | Static/dynamic interrupts; native checkpointing |
+| Guardrails - HITL orchestration | Dapr Agents | Open Source | GA | Free | Durable agent workflows with deterministic replay + native HITL interrupts built on Dapr Workflows. |
 | Guardrails - input/output | NeMo Guardrails (NVIDIA) | Open Source | GA | Free | Input/output moderation, jailbreak detection |
 | Guardrails - PII | Presidio (Microsoft) | Open Source | GA | Free | PII identification/anonymization at ingestion |
 | Guardrails - inter-agent comms | Dapr | Open Source | GA | Free | mTLS sidecar isolation between agents |
