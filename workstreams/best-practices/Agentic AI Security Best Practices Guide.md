@@ -2,7 +2,7 @@
 Working Group: Security & Privacy (AAIF)
 Deliverable: 4 of 5 - Agentic AI Security Best Practices Guide
 Status: Draft v0.1, for WG review
-Co-Leads: Fernando Lucktemberg (and co-lead, TBD)
+Leads: Fernando Lucktemberg, Matthew Khouzam
 ---
 
 # Agentic AI Security Best Practices Guide
