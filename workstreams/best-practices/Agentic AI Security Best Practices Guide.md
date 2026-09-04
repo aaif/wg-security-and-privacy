@@ -208,3 +208,41 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | IBM Cost of a Data Breach Report 2025 | Analyst Report | Section 6 |
 | Obsidian Security, 2025 AI Agent Security Report | Vendor Report | Section 2 |
 | Lucktemberg, "Agentic AI Security Stack" (book, in progress) | Author's Prior Publication | Primary structural source for this entire document |
+
+## Appendix B: Acronym Reference
+
+| Acronym | Expansion |
+|---|---|
+| AAIF | Agentic AI Infrastructure Foundation |
+| ASI | Agentic Security Intelligence |
+| ATLAS | Adversarial Threat Landscape for Artificial-Intelligence Systems (MITRE) |
+| BSL | Business Source License |
+| CNCF | Cloud Native Computing Foundation |
+| CSA | Cloud Security Alliance |
+| CTF | Capture the Flag |
+| CVE | Common Vulnerabilities and Exposures |
+| CVSS | Common Vulnerability Scoring System |
+| EPC | Enclave Page Cache |
+| FAA | Federal Aviation Administration |
+| GDPR | General Data Protection Regulation |
+| HITL | Human-in-the-Loop |
+| HSM | Hardware Security Module |
+| IAM | Identity and Access Management |
+| IRSA | IAM Roles for Service Accounts (AWS) |
+| MAST | Multi-Agent Security Testing |
+| MCP | Model Context Protocol |
+| OIDC | OpenID Connect |
+| OWASP | Open Worldwide Application Security Project |
+| PII | Personally Identifiable Information |
+| PKCE | Proof Key for Code Exchange |
+| RCE | Remote Code Execution |
+| SBOM | Software Bill of Materials |
+| SEV-SNP | Secure Encrypted Virtualization - Secure Nested Paging (AMD) |
+| SGX | Software Guard Extensions (Intel) |
+| SIEM | Security Information and Event Management |
+| SPIFFE | Secure Production Identity Framework for Everyone |
+| SVID | SPIFFE Verifiable Identity Document |
+| TDX | Trust Domain Extensions (Intel) |
+| UCAN | User Controlled Authorization Networks |
+| WIF | Workload Identity Federation (GCP) |
+| YARA | Yet Another Recursive Acronym (malware pattern matching tool) |
