@@ -167,7 +167,13 @@ Tier 4 triggers automatically for any external network request regardless of the
 3. the ordered restart checklist (injection vector identified and mitigated, full credential rotation, log review of the window preceding the halt, explicit owner sign-off)
 4.  the forensic preservation requirement (execution log, pending approval queue, memory contents, and active tool invocations snapshotted to immutable storage *before* any state is cleared , an automated restart that clears state as part of its sequence will destroy the evidence the investigation depends on).
 
-**Quick start, in sequence:** (1) establish per-agent identity before anything else , shared service-account identity makes every downstream attribution requirement impossible to satisfy; (2) instrument action, approval, and model-call events first, since they cover the highest-priority regulatory obligations per implementation hour; (3) propagate W3C Trace Context across delegation boundaries; (4) add per-entry signing and Merkle append with a published baseline root hash; (5) complete the remaining event categories; (6) stand up the operational stream and behavioral baselines (Section 5) last, since they have no value without the compliance stream already running underneath them.
+**Quick start, in sequence:** 
+1. establish per-agent identity before anything else, shared service-account identity makes every downstream attribution requirement impossible to satisfy
+2. instrument action, approval, and model-call events first, since they cover the highest-priority regulatory obligations
+3. propagate W3C Trace Context across delegation boundaries
+4. add per-entry signing and Merkle append with a published baseline root hash
+5. complete the remaining event categories
+6. stand up the operational stream and behavioral baselines (Section 5) last, since they have no value without the compliance stream already running underneath them.
 
 ## 7. Curated External Reference Section
 
