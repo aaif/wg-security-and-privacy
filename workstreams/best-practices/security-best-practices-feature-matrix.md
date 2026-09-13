@@ -127,21 +127,19 @@ Derived from the _Agentic AI Security Best Practices Guide (Draft v0.1)_ and sup
 | 5.2.2 | Use scanner and checklist gates from Sections 3 and 4 as hard blocking criteria | Skill verification tiers enforced as prerequisites | Process | [SPAA-BP-Guide] |
 | 5.2.3 | Use scanner and checklist gates from Sections 3 and 4 as hard blocking criteria | Critical/High findings block production deployment | Process | [SPAA-BP-Guide] |
 | 5.3.1 | Run a structured readiness checklist before any guardrail system goes live | Tier-definition documentation review | Process | [SPAA-BP-Guide] |
-| 5.3.2 | Run a structured readiness checklist before any guardrail system goes live | Approval-interface context completeness test by unfamiliar reviewer | People | [SPAA-BP-Guide] |
+| 5.3.2 | Run a structured readiness checklist before any guardrail system goes live | Approval-interface surfaces full context and is tested by unfamiliar reviewer | People | [SPAA-BP-Guide] |
 | 5.3.3 | Run a structured readiness checklist before any guardrail system goes live | Kill switch tested | Process | [SPAA-BP-Guide] |
-| 5.3.4 | Run a structured readiness checklist before any guardrail system goes live | Classifier model version record with recalibration procedure | Process | [SPAA-BP-Guide] |
+| 5.3.4 | Run a structured readiness checklist before any guardrail system goes live | Record classifier model version and define recalibration procedure | Process | [SPAA-BP-Guide] |
 | 5.4.1 | Use a graduated rollout structure for eval | Read-only + full audit phase (weeks 1–4) | Process | [SPAA-BP-Guide] |
 | 5.4.2 | Use a graduated rollout structure for eval | Limited autonomy + high-density sampling (weeks 5–12) | Process | [SPAA-BP-Guide] |
 | 5.4.3 | Use a graduated rollout structure for eval | Full tier architecture (months 4–6) | Process | [SPAA-BP-Guide] |
 | 5.4.4 | Use a graduated rollout structure for eval | Steady state (month 7+) | Process | [SPAA-BP-Guide] |
-| 5.5.1 | Establish statistical baselines for continuous behavioral evaluation | Baseline tool-call frequency per agent identity | Technology | [SPAA-BP-Guide] |
-| 5.5.2 | Establish statistical baselines for continuous behavioral evaluation | Parameter entropy analysis of tool invocations | Technology | [SPAA-BP-Guide] |
-| 5.5.3 | Establish statistical baselines for continuous behavioral evaluation | Inter-agent message volume tracking | Technology | [SPAA-BP-Guide] |
-| 5.5.4 | Establish statistical baselines for continuous behavioral evaluation | Token-count ratio monitoring | Technology | [SPAA-BP-Guide] |
-| 5.5.5 | Establish statistical baselines for continuous behavioral evaluation | Memory-write frequency baselining | Technology | [SPAA-BP-Guide] |
-| 5.5.6 | Establish statistical baselines for continuous behavioral evaluation | Deviation-based alerting (not fixed thresholds) | Technology | [SPAA-BP-Guide] |
+| 5.5.1 | Establish statistical baselines for continuous behavioral evaluation using deviation-based alerting | Baseline tool-call frequency per agent identity | Technology | [SPAA-BP-Guide] |
+| 5.5.2 | Establish statistical baselines for continuous behavioral evaluation using deviation-based alerting | Parameter entropy analysis of tool invocations | Technology | [SPAA-BP-Guide] |
+| 5.5.3 | Establish statistical baselines for continuous behavioral evaluation using deviation-based alerting | Inter-agent message volume tracking | Technology | [SPAA-BP-Guide] |
+| 5.5.4 | Establish statistical baselines for continuous behavioral evaluation using deviation-based alerting | Token-count ratio monitoring | Technology | [SPAA-BP-Guide] |
+| 5.5.5 | Establish statistical baselines for continuous behavioral evaluation using deviation-based alerting | Memory-write frequency baselining | Technology | [SPAA-BP-Guide] |
 | 5.6.1 | Treat reasoning traces as corroborating evidence only | Explicit `unverified` tagging on all reasoning traces | Process | [SPAA-BP-Guide] |
-| 5.6.2 | Treat reasoning traces as corroborating evidence only | Primary detection signal derived from behavioral/statistical baselines, not trace content | Process | [SPAA-BP-Guide] |
 
 ---
 
