@@ -40,7 +40,7 @@ Each section follows the same structure: the failure pattern in production, the 
 
 ## 3. Secure Tool Invocation
 
-This section covers two adjacent attack surfaces that production deployments encounter together: the protocol layer agents use to reach tools (MCP), and the supply chain of skills/extensions agents load before invoking anything at all.
+This section covers three adjacent attack surfaces that production deployments encounter together: the protocol layer agents use to reach tools (MCP), the supply chain of skills and extensions agents load, and the implementation of the tools themselves once they are invoked.
 
 ### 3.1 MCP Protocol Security
 
@@ -107,6 +107,18 @@ Skills are not the only artifact in the supply chain. MCP server packages are di
 | No sandbox | Full | Full user account | Enterprise-wide |
 
 **Quick start.** Enable OS-level sandbox mode across all developer environments before building any review pipeline — it is a configuration change, not a process build, and it reduces the blast radius of any unverified artifact from full system access to working-directory scope.
+
+### 3.3 Tool Implementation
+
+**The failure pattern.** Protocol authentication governs how an agent reaches a tool, and supply-chain verification governs where the tool came from. Neither governs what the tool does with the arguments it receives. A large class of MCP vulnerabilities lives here: a tool that passes model-supplied arguments into a shell command, a database query, or a file path without validation turns a prompt injection upstream into command injection, SQL injection, or path traversal at the point of execution. The LLM sits between user intent and the tool call, so an argument that looks benign in the transcript can carry an injection payload the tool executes with its own privileges.
+
+**The control.** Treat the tool boundary as a trust boundary, and never delegate security-critical validation to the model:
+
+1. **Validate every parameter at the tool boundary.** Enforce a strict schema (type, range, format, allowlist) on each argument inside the tool handler, before it reaches any interpreter, query, or filesystem call. The model's output is untrusted input.
+2. **Design constrained, use-case tools rather than general-purpose ones.** Replace an open primitive such as `query_database(sql)` with a narrow operation such as `get_order_status(order_id)`, and build the query server-side. A tool that cannot express a dangerous operation cannot be manipulated into performing one.
+3. **Give tools least-privilege credentials.** Scope the tool's own credentials to the minimum it needs: read-only database connections, allowlisted tables, no ambient filesystem or network access beyond its declared purpose (Section 2).
+4. **Keep code execution out of handlers.** Do not expose `exec`, `eval`, `subprocess`, or equivalent dynamic execution in a tool handler that receives model-supplied arguments. Where dynamic execution is the tool's purpose, run it in the isolated environment described in the risk-stratification table above.
+5. **Treat tool output as untrusted input before it re-enters context.** A tool's response can carry injected instructions (Section 3.1 tool poisoning, Section 3.2.3 Agent Cards); validate and, where relevant, sanitize it before it is fed back to the model.
 
 ## 4. Guardrails
 
