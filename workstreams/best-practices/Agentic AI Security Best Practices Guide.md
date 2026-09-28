@@ -84,8 +84,8 @@ Skills are not the only artifact in the supply chain. MCP server packages are di
 
 **The control: three verification steps.**
 
-1. **Step 1 - SBOM scan before any production connection.** Generate a software bill of materials (Syft) and scan for known CVEs (Grype) against the server package and all transitive dependencies. Any Critical or High finding blocks the connection until remediated.
-2. **Step 2 - version pinning and publisher verification.** Pin the approved server to a specific version hash in your organizational registry; verify the source repository matches the declared publisher; treat any version update as untrusted until Step 1 completes again. For containerized deployments, require image signing (Sigstore/cosign) and verify the signature before instantiation.
+1. **Step 1 - SBOM scan before any production connection.** Generate a software bill of materials (Syft) and scan for known CVEs (Grype) against the server package and all transitive dependencies. Any Critical or High finding blocks the connection until remediated. An SBOM describes a single package. Capturing what the agent as a whole is composed of requires an agent-level bill of materials spanning its tools, MCP servers, skills, models and policies, an inventory now specified as the AgBOM in the [OWASP Agent Control Standard](https://github.com/GenAI-Security-Project/agent-control-standard) with CycloneDX, SPDX and SWID serializations.
+2. **Step 2 - version pinning, publisher verification and artifact provenance.** Pin the approved server to a specific version hash in your organizational registry, and treat any version update as untrusted until Step 1 completes again. Verify that the source repository matches the declared publisher to catch impersonation. A second check catches a different problem: a published package can carry code that is absent from its source repository, for example an exfiltration line added to the distributed tarball. Verify the shipped artifact against the source it claims to come from. Require build-linked attestation, npm provenance or PyPI attestations (both Sigstore-backed) for packages, and image signing (Sigstore/cosign) for containers, and verify it before instantiation. Where a package publishes no attestation, diff the tarball against the tagged source before approval and treat any divergence as the finding.
 3. **Step 3 - update monitoring.** Subscribe to the server package's release feed and treat any new version as blocked by default until Steps 1 and 2 complete. This closes the same rug-pull window that Section 3.1 addresses at the protocol layer, but at the binary layer.
 
 #### 3.2.3 A2A Agent Cards
@@ -241,6 +241,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | Source | Type | Application |
 |---|---|---|
 | OWASP Top 10 for Agentic Applications 2026 (Dec 9, 2025); OWASP Secure MCP Development Guide (Feb 16, 2026) | Standards Body | ASI classification and MCP guidance throughout |
+| OWASP Agent Control Standard (GenAI Security Project) | Open Standard | Section 3.2.2 (AgBOM) |
 | MITRE ATLAS v4.6.0–v5.4.0 | Standards Body | Technique codes referenced inline |
 | CVE-2025-68664 (LangGrinch), CVE-2025-6514 (mcp-remote), CVE-2025-49596 (MCP Inspector) | CVE Record | Section 2 and 3.1 incident grounding |
 | Liu et al., "Agent Skills in the Wild," arXiv:2601.10338 (2026); Fujinuma et al., "Defenses & Enablers for Skill Injection Attacks," arXiv:2606.01567 (2026) | Peer-Reviewed Research | Section 3.2 |
@@ -262,6 +263,8 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | Acronym | Expansion |
 |---|---|
 | AAIF | Agentic AI Foundation |
+| ACS | Agent Control Standard (OWASP) |
+| AgBOM | Agent Bill of Materials |
 | ASI | Agentic Security Initiative (OWASP) |
 | ATLAS | Adversarial Threat Landscape for Artificial-Intelligence Systems (MITRE) |
 | BSL | Business Source License |
