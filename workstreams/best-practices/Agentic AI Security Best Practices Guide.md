@@ -149,6 +149,13 @@ Tier 4 triggers automatically for any external network request regardless of the
 3. approval rate is tracked as a time series and flagged for fatigue when it climbs within a shift
 4. synthetic anomaly requests are injected at randomized intervals to measure genuine reviewer detection rate, not just throughput.
 
+**Decide which capabilities may coexist before designing containment.** The question that precedes every mechanism below is whether an agent session should hold a dangerous combination of capabilities at all. [Simon Willison's lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) names the combination that turns a prompt injection into data theft: access to private data, exposure to untrusted content, and the ability to communicate externally. [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/) generalizes it: within a single session an agent should hold no more than two of the following three properties.
+- **A**: processing untrusted input
+- **B**: access to sensitive systems or private data
+- **C**: the ability to change state or communicate externally
+
+When a task genuinely needs all three, split it across sessions with fresh context, or require synchronous human approval rather than autonomous execution. Apply this before the containment controls below, which assume a capability combination that has already been judged necessary.
+
 **Containment guardrails at the orchestration layer** (relevant wherever agents delegate to other agents, not only at the human-approval boundary): trust-boundary inspection at every delegation handoff (does the payload exceed declared scope, request undeclared permissions, or reference unapproved external endpoints); circuit breakers that open after repeated inspection or attestation failures and fail to a defined chain (secondary agent → cached last-verified response → human escalation , never silent autonomous retry); bulkheads that isolate compute, memory, and API quota per domain so a compromised low-sensitivity cluster cannot reach a high-sensitivity one; and a kill switch whose state lives **outside** the agent runtime (a compromised agent with write access to its own environment can otherwise disable its own kill switch). Kill switches require three granularities: individual agent, agent group, global, and a graduated degradation path (reduce autonomy, then tool access, then require checkpoint approval, then disable) rather than a single binary stop, because an instant global halt across a large swarm is itself an operational event that needs to be weighed against the threat it responds to.
 
 **Quick start.** Map every operation type to a lifecycle and tier before writing approval code; implement tier classification in the agent's action layer, not the approval interface; enforce the Tier 4 two-reviewer rule as a database constraint, not a UI gate; connect approval logs to the Security Information and Event Management (SIEM) before go-live; test the kill switch in staging before day one, a kill switch that has never been drilled should be assumed non-functional.
@@ -254,6 +261,8 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | EU AI Act Article 12 (Regulation (EU) 2024/1689); AI Omnibus, in force 27 July 2026 (European Commission) | Regulatory Text | Section 6 |
 | Anthropic, "Reasoning Models Don't Always Say What They Think" (2025); Anthropic Petri (2025) | Vendor Research | Section 5 |
 | Cemri et al., MAST, arXiv:2503.13657 (2025) | Peer-Reviewed Research | Section 4 (orchestration guardrails) |
+| Simon Willison, "The Lethal Trifecta for AI Agents" (2025) | Practitioner Analysis | Section 4 (capability containment) |
+| Meta, "Agents Rule of Two: A Practical Approach to AI Agent Security" (2025) | Vendor Research | Section 4 (capability containment) |
 | IBM Cost of a Data Breach Report 2025 | Analyst Report | Section 6 |
 | Obsidian Security, 2025 AI Agent Security Report | Vendor Report | Section 2 |
 | Lucktemberg, "Agentic AI Security Stack" (book, in progress) | Author's Prior Publication | Primary structural source for this entire document |
