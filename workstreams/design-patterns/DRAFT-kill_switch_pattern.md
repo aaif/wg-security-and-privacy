@@ -52,27 +52,23 @@ The solution requires a containment control plane which separates the declarativ
 
 By decoupling the containment control plane entirely from the agent's prompt context, internal memory, and execution loops, the system enforces execution stops server-side, completely outside the model's reach.
 
-The containment plane consists of four complementary patterns —**constraint, detection, halting, and rollback**—each addressing a distinct aspect of agent containment. These components can operate independently or be combined as appropriate to the agent’s risk profile and containment requirements.
+The kill-switch pattern covers trigger detection, execution halting, and recovery. It does not define the agent's authorization policy or runtime isolation boundary; establish those separately. For deployments using an attested isolated runtime, see the [Attested Isolated Runtime pattern](DRAFT-attested-isolated-runtime.md) for its enforcement boundary, scoped authorization, and protected credential release.
 
-Together, these layers form a closed containment loop: **constraint → detect → halt → rollback**. The control plane remains independent of the agent's prompt, memory, and execution logic, ensuring that the agent cannot override the controls responsible for limiting, stopping, or recovering its execution.
+Together, these functions form a containment loop: **detect → halt → rollback**. The control plane remains independent of the agent's prompt, memory, and execution logic, ensuring that the agent cannot override the controls responsible for stopping or recovering its execution.
 
-**1\. Containment** 
+**1\. Containment Actions**
 
-A robust containment architecture must coordinate four technical primitives to guarantee complete isolation :
+The kill switch invokes the deployment's existing enforcement mechanisms; it does not prescribe the isolation architecture.
 
-1\. **Purpose Binding (Authorization Level):**
-
-Enforce a strict, immutable boundary on the agent's authorization surface at runtime (e.g., restricting which tools can be called, which data classes can be written, and what spend caps apply) . The agent's authority must never be defined solely by the prompt, but must be programmatically locked down .
-
-2\. **Kill Switch (Process Level):**
+1\. **Kill Switch (Process Level):**
 
 An immediate, out-of-band operation that terminates the active orchestrator process and blocks re-invocation. The target SLA for deactivation latency should be established as a guiding principle proportional to the agent's specific risk profile, transactional authority, and the maximum tolerable window for containment .
 
-3\. **Network Isolation (Network Level):**
+2\. **Network and Tool Denial:**
 
-The ability to unilaterally control server outbound (egress) network traffic at the container or micro-VM boundary, isolating the agent's environment from sensitive internal databases and external command-and-control servers .
+On activation, deny outbound network traffic and tool dispatch through the deployment's enforcement point .
 
-4\. **Credential Revocation (Identity Level):**
+3\. **Credential Revocation (Identity Level):**
 
 Unilateral invalidation of the Non-Human Identity (NHI) credentials, API keys, or long-lived security tokens used by the agent within the central Identity Provider (IdP) . This ensures downstream external endpoints immediately reject subsequent requests even if the local process or token is leaked .
 
@@ -135,7 +131,6 @@ High-risk transactional API dispatches are buffered by the intercepting routing 
 **Drawbacks**
 
 ·         **State Fragmentation:** Hard process stops or sudden container teardowns can leave downstream databases in inconsistent, partially written states, requiring manual reconciliation or rollback interventions .  
-·         **Resource and Latency Overhead:** Running agents in ephemeral, isolated sandboxes and routing all API calls through proxy checkpoints introduces millisecond-level execution latency and increased infrastructure costs .  
 ·         **Operational Bottlenecks:** Restricting automatic cooldowns and requiring explicit, logged human re-authorization for every tripped state can create operational friction and slow automated business pipelines \[Hill, 2026\].
 
 **Residual Risks**
@@ -147,7 +142,7 @@ High-risk transactional API dispatches are buffered by the intercepting routing 
 ――――――――――――――――――――――――――――――――――――――――
 
 **Related Patterns**
-- Attested Isolation runtime
+- [Attested Isolated Runtime](DRAFT-attested-isolated-runtime.md): Defines the attested execution boundary, enforcement point, scoped authorization, and protected credential release for deployments that require those properties. The kill switch complements it by defining how execution is stopped and recovery is initiated.
 
 ――――――――――――――――――――――――――――――――――――――――
 
