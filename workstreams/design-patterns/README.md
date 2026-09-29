@@ -37,3 +37,5 @@ Use [DRAFT-design_patterns_catalog.md](DRAFT-design_patterns_catalog.md) as the 
 | Matthew Khouzam | Ericsson |
 | Saquib Saifee | IBM |
 | Sohrab Farooq | TELUS |
+| Roel Schuurkes | Independent |
+
