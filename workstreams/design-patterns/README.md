@@ -35,7 +35,6 @@ Use [DRAFT-design_patterns_catalog.md](DRAFT-design_patterns_catalog.md) as the 
 | Hsiao-Ying Lin | Huawei |
 | Jonas Pfoh | Bluerock |
 | Matthew Khouzam | Ericsson |
+| Roel Schuurkes | Independent |
 | Saquib Saifee | IBM |
 | Sohrab Farooq | TELUS |
-| Roel Schuurkes | Independent |
-
