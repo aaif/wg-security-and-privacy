@@ -6,6 +6,10 @@ Evaluate existing AI threat model frameworks (e.g., CSA MAESTRO, OWASP, NIST AI 
 
 The output is a gap analysis and guidance document. It establishes whether a sufficient model already exists or whether agentic-specific gaps warrant new framework work, and it feeds into the downstream Design Patterns Catalog and Best Practices Guide.
 
+## Deliverable
+
+The gap analysis lives in the deliverables folder: [Agentic AI Threat Modeling: Gap Analysis and Framework Design](../../deliverables/DRAFT-agentic-ai-threat-modeling-gap-analysis.md).
+
 ## Leads
 
 | Name | Affiliation |

@@ -13,6 +13,10 @@ Topic areas include:
 - Post-incident forensics
 - A curated reference section to external frameworks and resources
 
+## Deliverable
+
+The guide lives in the deliverables folder: [Agentic AI Security Best Practices Guide](../../deliverables/DRAFT-agentic-ai-security-best-practices-guide.md). Since the first version merged, the guide is a living document maintained through issues and pull requests, with Fernando Lucktemberg and Matthew Khouzam as mandatory reviewers per the [2026-09-29 meeting decision](../../meeting-notes/2026-09-29.md).
+
 ## Leads
 
 | Name | Affiliation |
