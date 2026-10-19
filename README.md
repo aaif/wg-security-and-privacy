@@ -17,7 +17,11 @@ Current term for the Working Group Chairs is **March 1, 2026 - January 31, 2027*
 
 ## Meetings
 
-This working group meets **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=10:00AM&tz=San%20Francisco)).
+This working group runs two alternating meetings so contributors across time zones can take part. The sessions alternate weeks, the chair attends both to carry notes and action items between them, and attending either one is enough to stay current.
+
+### Primary Meeting
+
+The primary meeting is **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=10:00AM&tz=San%20Francisco)).
 
 **Next meeting:** October 27, 2026
 
@@ -31,8 +35,29 @@ This working group meets **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Tim
 | IST / India (UTC+5:30) | 11:30 PM |
 | CST / China (UTC+8) | 2:00 AM +1 |
 | JST / Japan (UTC+9) | 3:00 AM +1 |
+| AEDT / Australia (UTC+11) | 5:00 AM +1 |
 
-**[Join the Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91539659750?password=59701aab-9082-4ab4-8115-a18c11039c4b)** 
+**[Join the Primary Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91539659750?password=******** 
+
+### APAC Meeting
+
+The APAC meeting is **biweekly on Mondays at 9:00PM ET** (USA Eastern Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=9:00PM&tz=New%20York)). It lands on the alternate week from the primary meeting and follows the same agenda, so contributors in Asia-Pacific time zones get a working-hours session.
+
+**Next meeting:** October 19, 2026
+
+| Timezone | Time |
+| --- | --- |
+| PT / US (PST / UTC-8) | 6:00 PM |
+| ET / US (EST / UTC-5) | 9:00 PM |
+| UTC | 2:00 AM +1 |
+| CET / Europe (UTC+1) | 3:00 AM +1 |
+| IST / Israel (UTC+2) | 4:00 AM +1 |
+| IST / India (UTC+5:30) | 7:30 AM +1 |
+| CST / China (UTC+8) | 10:00 AM +1 |
+| JST / Japan (UTC+9) | 11:00 AM +1 |
+| AEDT / Australia (UTC+11) | 1:00 PM +1 |
+
+**[Join the APAC Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/95568865388?password=******** 
 
 ## Meeting Agenda and Minutes
 
