@@ -34,7 +34,9 @@ Each section follows the same structure: the failure pattern in production, the 
 | Static API key (no control, baseline) | Days to months, until manually revoked | Full scope of key's permissions, indefinitely |
 | Dynamic secrets (Vault) | 15–60 minutes, configurable | Single resource type, single operation |
 | Workload identity | 1 hour (cloud default, configurable lower) | IAM role scope; bounded by role design |
-| Confidential computing | Not applicable (hardware-protected) | Bounded by enclave; inaccessible to hypervisor |
+| Confidential computing | Credential validity, subject to effective revocation; hardware isolation does not shorten token lifetime | Credential permissions if exposed by guest software. Hardware isolation protects against host access within the platform's threat model |
+
+Use confidential computing alongside short-lived, narrowly scoped credentials and controls on which guest components can access or release them. A bearer token grants access to whoever holds it ([RFC 6750 §1.2](https://www.rfc-editor.org/rfc/rfc6750.html#section-1.2)), and the guest software stack sits inside the trusted computing base ([Intel TDX guest threat model](https://intel.github.io/ccc-linux-guest-hardening-docs/security-spec.html#threat-model)), so a token that guest software leaks is exposed whatever the hardware protects.
 
 **Quick start.** Audit every agent deployment for `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `GOOGLE_APPLICATION_CREDENTIALS`, or equivalent long-lived secrets in environment variables or image layers. Replace each with the platform-native workload identity mechanism. This single change removes the most common credential-extraction pathway (the CVE-2025-68664 class) and shrinks blast radius from "full cloud account access, indefinite" to "scoped role access, one-hour maximum."
 
