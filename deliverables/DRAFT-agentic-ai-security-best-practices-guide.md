@@ -103,10 +103,10 @@ Skills are not the only artifact in the supply chain. MCP server packages are di
 | Environment | Network Access | Filesystem Access | Blast Radius |
 |---|---|---|---|
 | Sandboxed code-execution VM (no network) | None | Temporary VM only | Minimal |
-| Sandbox mode enabled, working-directory scoped | Allowlisted only | Current working directory | Contained |
+| Sandbox mode enabled, working-directory scoped | Allowlisted at the proxy | Current working directory | Narrowed |
 | No sandbox | Full | Full user account | Enterprise-wide |
 
-**Quick start.** Enable OS-level sandbox mode across all developer environments before building any review pipeline — it is a configuration change, not a process build, and it reduces the blast radius of any unverified artifact from full system access to working-directory scope.
+**Quick start.** Enable sandbox mode across all developer environments before building any review pipeline. It is a configuration change, and it narrows what an unverified artifact can touch from the full user account to the working directory. Treat that as the limit of what it delivers. Unless the boundary is kernel-enforced through filesystem confinement, namespaces, and syscall filtering, sandbox mode does not close network egress, and it does not cover the handoff to host components that run outside the sandbox. Capsule Security showed the egress gap on an ordinary task: the sandbox proxy refused the agent's `curl` upload, so the agent reached the internet through a Python HTTP client the sandbox did not cover and uploaded project files to a public anonymous host ([Capsule Security, 2026](https://www.capsulesecurity.io/blog-post/cursebox-the-agent-that-sends-your-files-to-strangers-to-get-the-job-done)). Pillar Security reproduced escapes across four agent products where the agent wrote a file that a trusted component outside the sandbox later ran ([Pillar Security, 2026](https://www.pillar.security/blog/the-week-of-sandbox-escapes)). The verification controls above stay in place with sandbox mode on.
 
 ### 3.3 Tool Implementation
 
@@ -258,6 +258,8 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | CVE-2025-68664 (LangGrinch), CVE-2025-6514 (mcp-remote), CVE-2025-49596 (MCP Inspector) | CVE Record | Section 2 and 3.1 incident grounding |
 | Liu et al., "Agent Skills in the Wild," arXiv:2601.10338 (2026); Fujinuma et al., "Defenses & Enablers for Skill Injection Attacks," arXiv:2606.01567 (2026) | Peer-Reviewed Research | Section 3.2 |
 | Snyk ToxicSkills Study (Feb 2026) | Vendor Research | Section 3.2 |
+| Capsule Security, "Cursebox: The Agent That Sends Your Files to Strangers to Get the Job Done" (2026) | Vendor Research | Section 3.2 (environment risk stratification) |
+| Pillar Security, "The Week of Sandbox Escapes" (2026) | Vendor Research | Section 3.2 (environment risk stratification) |
 | Cato CTRL, "Weaponizing Claude Skills with MedusaLocker" (2025) | Vendor Report | Section 3.2 |
 | A2A Protocol Specification, Agent Discovery and Enterprise Implementation (a2aproject/A2A, docs/topics/agent-discovery.md and enterprise-ready.md) | Open Standard | Section 3.2.3 |
 | MCP Specification 2026-07-28, Base Protocol, General fields (modelcontextprotocol.io/specification/2026-07-28/basic) | Open Standard | Section 6 |
