@@ -160,6 +160,8 @@ When a task genuinely needs all three, split it across sessions with fresh conte
 
 **Quick start.** Map every operation type to a lifecycle and tier before writing approval code; implement tier classification in the agent's action layer, not the approval interface; enforce the Tier 4 two-reviewer rule as a database constraint, not a UI gate; connect approval logs to the Security Information and Event Management (SIEM) before go-live; test the kill switch in staging before day one, a kill switch that has never been drilled should be assumed non-functional.
 
+**Additional Consideration.** Consider using [LlamaFirewall Core Architectural Compenents] (https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall) based on tiering decisions made above and specific risk scenarios. These components offer an approach to minimizing prompt injection likelihood. 
+
 ## 5. Evaluation Frameworks
 
 **The failure pattern.** Conventional threshold-based alerting does not work reliably against non-deterministic agent behavior. For example, an agent processing a malicious input will not necessarily trip a fixed token-count or error-code threshold. Security evaluation happens before release and answers one question: does this agent, server or skill meet a security bar at all. It operates at two points:
@@ -237,6 +239,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | Guardrails - HITL orchestration | LangGraph | Open Source | GA | Free | Static/dynamic interrupts; native checkpointing |
 | Guardrails - HITL orchestration | Dapr Agents | Open Source | GA | Free | Durable agent workflows with deterministic replay + native HITL interrupts built on Dapr Workflows. |
 | Guardrails - input/output | NeMo Guardrails (NVIDIA) | Open Source | GA | Free | Input/output moderation, jailbreak detection |
+| Guardrails - input/output | LlamaFirewall | Open Source | GA | Free | suite of tools to protect against prompt injection |
 | Guardrails - PII | Presidio (Microsoft) | Open Source | GA | Free | PII identification/anonymization at ingestion |
 | Guardrails - inter-agent comms & policy | Dapr | Open Source | GA | Free | mTLS sidecar isolation between agents, service-invocation access-control allowlists, OPA policy middleware, secrets API abstraction over Vault/Cloud stores, workflow level tool-access policies (to gate/block tools), PII scrubbing and input/output hooks |
 | Guardrails - execution isolation | gVisor / Firecracker | Open Source | GA | Free | Kernel- and microVM-level sandboxing for agent-generated code and tool execution with ephemeral per-task environments |
