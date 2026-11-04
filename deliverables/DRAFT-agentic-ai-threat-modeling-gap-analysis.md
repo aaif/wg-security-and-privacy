@@ -114,7 +114,7 @@ This is the best-covered of the eight gap areas in classification terms.
 
 **Gap:** the protocol itself, Model Context Protocol, now governed by AAIF under the Linux Foundation as of December 9, 2025, has two structural trust-model defects no framework closes: OAuth 2.1 authentication is marked *optional* in the specification, and stdio transport (the most common deployment mode) is explicitly *exempt* from the OAuth framework entirely. First-party and third-party servers are indistinguishable at the protocol level.
 
-The OWASP Secure MCP Development Guide (published February 16, 2026) codifies best practice for these defects, but it is guidance layered on top of the protocol, not a change to the protocol's mandatory security baseline.
+The OWASP Secure MCP Development Guide (published February 16, 2026) codifies best practices for these defects, but it is guidance layered on top of the protocol, not a change to the protocol's mandatory security baseline.
 
 **Severity:** High, and unusually actionable for this WG specifically: because AAIF now governs MCP, this WG has standing to recommend protocol-level baseline requirements that no other body can mandate.
 
@@ -189,7 +189,8 @@ No OWASP category, ATLAS technique code, or MAESTRO layer addresses payment-agen
 
 Read across the rows: most gap areas have a named OWASP category, at least one ATLAS technique code, and an assigned MAESTRO layer. Classification coverage is strong for six of the eight. Read down the right column: governance/accountability coverage is thin or absent for nearly all of them, and two rows (agent derailment, commerce) have no classification coverage at all from any of the three frameworks. That asymmetry, and those two genuinely uncovered rows, are the central findings of this report.
 
-**Synthesis.** Adequate, adopt as-is: vulnerability classification (OWASP's two lists), SOC-facing technique coding (ATLAS), and architectural layer assignment (MAESTRO) for the six areas that have them, memory/context poisoning, multi-agent persuasion, tool invocation risk, excessive agency, delegated authorization, and supply chain integrity. The WG should not produce a competing taxonomy for these; where the WG produces its own Taxonomy of Terms (Deliverable 1), terms should be cross-walked to these codes, not defined independently of them.
+**Synthesis.** 
+Adequate, adopt as-is: vulnerability classification (OWASP's two lists), SOC-facing technique coding (ATLAS), and architectural layer assignment (MAESTRO) for the six areas that have them, memory/context poisoning, multi-agent persuasion, tool invocation risk, excessive agency, delegated authorization, and supply chain integrity. The WG should not produce a competing taxonomy for these; where the WG produces its own Taxonomy of Terms (Deliverable 1), terms should be cross-walked to these codes, not defined independently of them.
 
 Adequate with a named gap, monitor: NIST IR 8596 (preliminary draft, finalization expected 2026), ISO 42001 (governance certification layer, already achieved by major cloud AI providers, useful as the standard most likely to be cited by EU AI Act Article 9 regulators), CSA AI Controls Matrix v1.0 (the broadest cross-mapping reference; recommended as the WG's default control-rationalization tool rather than building a new crosswalk).
 
