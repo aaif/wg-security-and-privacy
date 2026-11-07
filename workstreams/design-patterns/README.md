@@ -11,6 +11,7 @@ This folder contains the Security and Privacy Design Patterns Catalog and its in
 | [DRAFT-design_patterns_catalog.md](DRAFT-design_patterns_catalog.md) | Catalog landing page. Defines the catalog's scope and pattern domains, includes the required pattern template, and describes relationships between patterns. |
 | [DRAFT-approval_checkpoint_pattern.md](DRAFT-approval_checkpoint_pattern.md) | Draft pattern for binding approval to the action that executes and recording its execution and effect. |
 | [DRAFT-attested-isolated-runtime.md](DRAFT-attested-isolated-runtime.md) | Draft pattern for attested, isolated agent execution. |
+| [DRAFT-control-surfaces-for-agentic-harnesses.md](DRAFT-control-surfaces-for-agentic-harnesses.md) | Draft profile that binds the Approval Checkpoint, Runtime Policy Enforcement, Delegation Constraint, Memory Provenance, and Audit Trail patterns into one client-side contract for lifecycle events and authorization checkpoints. Proposed as a new deliverable, pending a working group decision. |
 | [DRAFT-kill_switch_pattern.md](DRAFT-kill_switch_pattern.md) | Draft pattern for independently halting agent execution and initiating containment and recovery actions. |
 | [README.md](README.md) | Folder index, contributor information, and guidance for using the catalog. |
 
