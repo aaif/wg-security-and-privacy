@@ -4,6 +4,13 @@ Deliverable: 4 of 5 - Agentic AI Security Best Practices Guide
 Status: Draft v0.1, for WG review
 Leads: Fernando Lucktemberg, Matthew Khouzam
 ---
+The WG's deliverable set, for reference:
+
+* D1: **Taxonomy of Terms**, shared vocabulary for agentic-AI-specific threats.
+* D2: **Threat Modeling Gap Analysis**, whether existing frameworks adequately cover agentic-specific threats.
+* D3: **Design Patterns Catalog**, architectural patterns for the gaps this report flags as build-new.
+* D4: **Best Practices Guide**, operational guidance built on this report's classification baseline. <-------- this document
+* D5: **Cross-WG Security and Privacy Review Checklist**, handoff and review checklist for findings that belong to another WG.
 
 # Agentic AI Security Best Practices Guide
 
