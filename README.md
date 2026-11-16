@@ -23,7 +23,7 @@ This working group runs two alternating meetings so contributors across time zon
 
 The primary meeting is **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=10:00AM&tz=San%20Francisco)).
 
-**Next meeting:** November 10, 2026
+**Next meeting:** November 24, 2026
 
 | Timezone | Time |
 | --- | --- |
@@ -37,13 +37,13 @@ The primary meeting is **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time;
 | JST / Japan (UTC+9) | 3:00 AM +1 |
 | AEDT / Australia (UTC+11) | 5:00 AM +1 |
 
-**[Join the Primary Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91539659750?password=******** 
+**[Join the Primary Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91539659750)**
 
 ### APAC Meeting
 
 The APAC meeting is **biweekly on Mondays at 9:00PM ET** (USA Eastern Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=9:00PM&tz=New%20York)). It lands on the alternate week from the primary meeting and follows the same agenda, so contributors in Asia-Pacific time zones get a working-hours session.
 
-**Next meeting:** November 2, 2026
+**Next meeting:** November 16, 2026
 
 | Timezone | Time |
 | --- | --- |
@@ -57,7 +57,7 @@ The APAC meeting is **biweekly on Mondays at 9:00PM ET** (USA Eastern Time; [Con
 | JST / Japan (UTC+9) | 11:00 AM +1 |
 | AEDT / Australia (UTC+11) | 1:00 PM +1 |
 
-**[Join the APAC Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/95568865388?password=******** 
+**[Join the APAC Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/95568865388)**
 
 ## Meeting Agenda and Minutes
 
