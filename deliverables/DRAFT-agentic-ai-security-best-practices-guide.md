@@ -235,7 +235,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 | Tool invocation - MCP gateway (OSS) | Linux Foundation agentgateway | Open Source | Beta | Free | Kubernetes-native; supports MCP and A2A |
 | Supply chain - skill scanning | Cisco Skill Scanner | Open Source | Beta | Free | Static + behavioral dataflow + optional LLM review |
 | Supply chain - skill scanning | NVIDIA SkillSpector | Open Source | Beta | Free | Two-stage static + optional LLM analysis across prompt injection, supply chain, excessive agency, and MCP-specific patterns; Apache 2.0; part of NVIDIA Verified Skills pipeline |
-| Supply chain - skill provenance | C2PA Content Credentials (c2pa-rs) | Open Standard / Open Source | Experimental | Free | Publisher signature over SKILL.md plus a signed digest of the other skill files; the skill binding is a community proposal not yet in the Agent Skills spec or the published C2PA text |
+| Supply chain - skill provenance | C2PA Content Credentials (c2pa-rs) | Open Standard / Open Source | Experimental | Free | Publisher signature over SKILL.md plus a signed digest of the other skill files |
 | Supply chain - SBOM baseline | Syft / Grype (Anchore) | Open Source | GA | Free | Traditional SBOM + CVE scanning; CI/CD native |
 | Guardrails - HITL orchestration | LangGraph | Open Source | GA | Free | Static/dynamic interrupts; native checkpointing |
 | Guardrails - HITL orchestration | Dapr Agents | Open Source | GA | Free | Durable agent workflows with deterministic replay + native HITL interrupts built on Dapr Workflows. |
