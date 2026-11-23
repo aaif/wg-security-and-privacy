@@ -43,7 +43,7 @@ The primary meeting is **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time;
 
 The APAC meeting is **biweekly on Mondays at 9:00PM ET** (USA Eastern Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=9:00PM&tz=New%20York)). It lands on the alternate week from the primary meeting and follows the same agenda, so contributors in Asia-Pacific time zones get a working-hours session.
 
-**Next meeting:** November 16, 2026
+**Next meeting:** November 30, 2026
 
 | Timezone | Time |
 | --- | --- |
