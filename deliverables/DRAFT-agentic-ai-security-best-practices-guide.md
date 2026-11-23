@@ -257,7 +257,7 @@ Maturity: GA (production-ready), Beta (publicly released with caveats), Experime
 |---|---|---|
 | OWASP Top 10 for Agentic Applications 2026 (Dec 9, 2025); OWASP Secure MCP Development Guide (Feb 16, 2026) | Standards Body | ASI classification and MCP guidance throughout |
 | OWASP Agent Control Standard (GenAI Security Project) | Open Standard | Section 3.2.2 (AgBOM) |
-| C2PA Technical Specification 2.5, Annex A.9, Embedding Manifests into Structured Text (https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html#embedding_manifests_into_structured_text); Agent Skills discussion #651 (https://github.com/agentskills/agentskills/discussions/651) | Open Standard; Community Proposal | Section 3.2.1 (Tier 3) |
+| C2PA Technical Specification 2.5, Annex A.9, Embedding Manifests into Structured Text (https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html#embedding_manifests_into_structured_text) | Open Standard | Section 3.2.1 (Tier 3) |
 | MITRE ATLAS v4.6.0–v5.4.0 | Standards Body | Technique codes referenced inline |
 | CVE-2025-68664 (LangGrinch), CVE-2025-6514 (mcp-remote), CVE-2025-49596 (MCP Inspector) | CVE Record | Section 2 and 3.1 incident grounding |
 | Liu et al., "Agent Skills in the Wild," arXiv:2601.10338 (2026); Fujinuma et al., "Defenses & Enablers for Skill Injection Attacks," arXiv:2606.01567 (2026) | Peer-Reviewed Research | Section 3.2 |
