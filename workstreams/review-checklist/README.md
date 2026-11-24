@@ -11,6 +11,10 @@ Initial review targets:
 - **Agentic Commerce** — payments security guardrails (fund draining, account leaks, payment-agent scope limits)
 - All other AAIF WGs as deliverables emerge
 
+## Inputs
+
+- [Agentic Commerce requirements](agentic-commerce-requirements.md): review questions for deliverables that touch a purchase made by an agent (draft).
+
 ## Leads
 
 | Name | Affiliation |
