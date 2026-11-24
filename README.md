@@ -23,7 +23,7 @@ This working group runs two alternating meetings so contributors across time zon
 
 The primary meeting is **biweekly on Tuesdays at 10:00AM PT** (USA Pacific Time; [Convert to local time zone](http://www.thetimezoneconverter.com/?t=10:00AM&tz=San%20Francisco)).
 
-**Next meeting:** November 24, 2026
+**Next meeting:** December 8, 2026
 
 | Timezone | Time |
 | --- | --- |
