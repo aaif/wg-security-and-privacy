@@ -1,0 +1,34 @@
+name: Best practices consistency
+
+# Runs only when the best practices guide or the feature matrix changes.
+# The check reports inconsistencies as warnings and never fails the job.
+on:
+  pull_request:
+    paths:
+      - deliverables/DRAFT-agentic-ai-security-best-practices-guide.md
+      - workstreams/best-practices/security-best-practices-feature-matrix.md
+  push:
+    branches:
+      - main
+    paths:
+      - deliverables/DRAFT-agentic-ai-security-best-practices-guide.md
+      - workstreams/best-practices/security-best-practices-feature-matrix.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compare guide and feature matrix
+        run: python3 scripts/check_best_practices_consistency.py
